@@ -6,7 +6,10 @@ import { FaCheck, FaStar, FaCrown, FaPlane, FaGraduationCap, FaGlobeAsia, FaSpa 
 import { FaTelegram } from "react-icons/fa";
 import { FiSearch, FiChevronDown, FiMail, FiMessageSquare, FiHelpCircle } from 'react-icons/fi';
 import { AnimatePresence } from "framer-motion";
+import Head from "next/head";
+
 export default function services() {
+  
   const [isVisible, setIsVisible] = useState(false);
  useEffect(() => {
     setIsVisible(true);
