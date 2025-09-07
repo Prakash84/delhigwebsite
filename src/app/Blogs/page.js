@@ -89,7 +89,7 @@ const posts = [
 const chipBase =
   "px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300";
 // end blogs section
-export default function blogs() {
+export default function Blogs() {
    const [isVisible, setIsVisible] = useState(false);
    useEffect(() => {
       setIsVisible(true);
