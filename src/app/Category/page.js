@@ -237,7 +237,7 @@ export default function Category() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/6631.jpg" // Replace with your background image path
+          src="/images/6637.jpg" // Replace with your background image path
           alt="Spa and Wellness Background"
           layout="fill"
           objectFit="cover"
@@ -376,7 +376,7 @@ export default function Category() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <Image
                   loading="lazy"
-                  src="/images/6637.jpg"
+                  src="/images/4201724.jpg"
                   alt="Luxury Spa Experience"
                   fill
                   className="object-cover rounded-[2.5rem] transform group-hover:scale-105 transition-transform duration-700"
