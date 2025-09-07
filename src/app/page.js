@@ -528,6 +528,146 @@ export default function Home() {
       </div>
     </div>
     {/* End Banner */}
+    {/* content section */}
+    <section className="relative bg-gradient-to-br from-[#fdf9f5] via-[#fefaf6] to-[#f8f4ed] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-0 w-28 h-28 rounded-full bg-pink-200/30 blur-2xl"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-purple-200/30 blur-2xl"></div>
+    
+      {/* Gradient Accent Shapes */}
+      <div className="absolute top-24 left-12 opacity-20 rotate-12">
+        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#9333ea" strokeWidth="1.5">
+          <path d="M12 2s-7 6.5-7 12a7 7 0 1 0 14 0c0-5.5-7-12-7-12z" />
+        </svg>
+      </div>
+      <div className="absolute bottom-32 right-16 opacity-20 -rotate-12">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#db2777" strokeWidth="1.5">
+          <path d="M12 2s-7 6.5-7 12a7 7 0 1 0 14 0c0-5.5-7-12-7-12z" />
+        </svg>
+      </div>
+    
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Side: Image Gallery */}
+          <div className={`space-y-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500 group">
+              <div className="relative h-96">
+                <Image 
+                  src="/images/6631.jpg" 
+                  alt="Relaxing Spa Massage"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              </div>
+              <div className="absolute bottom-4 left-4 text-white font-semibold text-lg tracking-wide">Signature Massage</div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                {src: "/images/6637.jpg", alt: "Spa Ambience"},
+                {src: "/images/27110283.jpg", alt: "Luxury Spa"}
+              ].map((img, idx) => (
+                <div key={idx} className="relative rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-500 group">
+                  <div className="relative h-56">
+                    <Image 
+                      src={img.src} 
+                      alt={img.alt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+    
+          {/* Right Side: Content */}
+          <div className={`transition-all duration-1000 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-xl border border-purple-50">
+              
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-white text-xl shadow-md">
+                  🌸
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 ml-4 tracking-tight">
+                  Room of Relaxation
+                </h2>
+              </div>
+    
+              <span className="block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">24+ Exclusive Body Spa Outlets</span>
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Each spa is designed as a sanctuary of serenity, blending luxury with natural healing.
+              </p>
+    
+              <span className="block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">The Finest Massages in Delhi</span>
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                Experience world-class therapies with unmatched comfort, elegance, and rejuvenation.
+              </p>
+    
+              {/* Locations */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                {[
+                  {icon: "💆‍♀️", title: "Lajpat Nagar", desc: "Prime Location"},
+                  {icon: "🕯️", title: "Aerocity", desc: "Luxury Spa"},
+                  {icon: "🏨", title: "Connaught Place", desc: "Central Access"},
+                  {icon: "🌱", title: "Dwarka", desc: "Exclusive Service"}
+                ].map((loc, i) => (
+                  <div key={i} className="bg-purple-50/60 p-4 rounded-xl flex items-start hover:shadow-md transition-all">
+                    <div className="text-purple-600 text-2xl mr-3 mt-1">{loc.icon}</div>
+                    <div>
+                      <h3 className="font-bold text-gray-800 mb-1">{loc.title}</h3>
+                      <p className="text-gray-600 text-sm">{loc.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+    
+              {/* Description */}
+              <div className="prose max-w-none mb-8">
+                <p className="text-gray-700">
+                  Our expert therapists combine ancient and modern techniques to release stress, improve circulation, and restore balance. From the moment you step inside, you’ll be welcomed into a space of peace, care, and luxury.
+                </p>
+                <p className="text-gray-700">
+                  Whether for pain relief, post-workout recovery, or pure relaxation, our spa treatments are designed around you.
+                </p>
+                <p className="text-gray-700">
+                  Every session ensures hygiene, comfort, and personalized care — because your wellness deserves the best.
+                </p>
+              </div>
+    
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://api.whatsapp.com/send?phone=918826482370"
+                  className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-full text-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Book Via WhatsApp
+                </a>
+                
+                <a
+                  href="/pricing"
+                  className="flex-1 inline-flex items-center justify-center bg-white border-2 border-purple-600 text-purple-700 px-6 py-4 rounded-full text-lg font-medium hover:bg-purple-50 transition-all duration-300 shadow hover:shadow-md"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-10H8v2h2v2h2v-2h2v-2h-2V8h-2v2zm7 5h-7v-2h7v2z"/>
+                  </svg>
+                  View Packages
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* Content */}
     {/* About Section */}
                         <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] relative overflow-hidden">
           {/* Decorative Elements */}
@@ -679,7 +819,7 @@ export default function Home() {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl transform group w-full h-[500px]">
                 <Image
                   loading="lazy"
-                  src="/images/celebrityspastaff.jpg"
+                  src="/images/413965.jpg"
                   alt="Spa Interior"
                   layout="fill"
                   objectFit="cover"
@@ -704,7 +844,7 @@ export default function Home() {
           </div>
         </section>
         {/* end About Section */}
-    {/* Content */}
+        
      <section className="py-16 bg-gradient-to-b from-pink-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -756,146 +896,6 @@ export default function Home() {
       </div>
     </section>
     {/* End Content */}
-    {/* content section */}
-    <section className="relative bg-gradient-to-br from-[#fdf9f5] via-[#fefaf6] to-[#f8f4ed] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-0 w-28 h-28 rounded-full bg-pink-200/30 blur-2xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-purple-200/30 blur-2xl"></div>
-    
-      {/* Gradient Accent Shapes */}
-      <div className="absolute top-24 left-12 opacity-20 rotate-12">
-        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#9333ea" strokeWidth="1.5">
-          <path d="M12 2s-7 6.5-7 12a7 7 0 1 0 14 0c0-5.5-7-12-7-12z" />
-        </svg>
-      </div>
-      <div className="absolute bottom-32 right-16 opacity-20 -rotate-12">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#db2777" strokeWidth="1.5">
-          <path d="M12 2s-7 6.5-7 12a7 7 0 1 0 14 0c0-5.5-7-12-7-12z" />
-        </svg>
-      </div>
-    
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Side: Image Gallery */}
-          <div className={`space-y-6 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500 group">
-              <div className="relative h-96">
-                <Image 
-                  src="/images/6631.jpg" 
-                  alt="Relaxing Spa Massage"
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              </div>
-              <div className="absolute bottom-4 left-4 text-white font-semibold text-lg tracking-wide">Signature Massage</div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-6">
-              {[
-                {src: "/images/6637.jpg", alt: "Spa Ambience"},
-                {src: "/images/27110283.jpg", alt: "Luxury Spa"}
-              ].map((img, idx) => (
-                <div key={idx} className="relative rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-500 group">
-                  <div className="relative h-56">
-                    <Image 
-                      src={img.src} 
-                      alt={img.alt}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-    
-          {/* Right Side: Content */}
-          <div className={`transition-all duration-1000 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-xl border border-purple-50">
-              
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-white text-xl shadow-md">
-                  🌸
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 ml-4 tracking-tight">
-                  Room of Relaxation
-                </h2>
-              </div>
-    
-              <span className="block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">24+ Exclusive Body Spa Outlets</span>
-              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                Each spa is designed as a sanctuary of serenity, blending luxury with natural healing.
-              </p>
-    
-              <span className="block font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">The Finest Massages in Delhi</span>
-              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                Experience world-class therapies with unmatched comfort, elegance, and rejuvenation.
-              </p>
-    
-              {/* Locations */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {[
-                  {icon: "💆‍♀️", title: "Lajpat Nagar", desc: "Prime Location"},
-                  {icon: "🕯️", title: "Aerocity", desc: "Luxury Spa"},
-                  {icon: "🏨", title: "Connaught Place", desc: "Central Access"},
-                  {icon: "🌱", title: "Dwarka", desc: "Exclusive Service"}
-                ].map((loc, i) => (
-                  <div key={i} className="bg-purple-50/60 p-4 rounded-xl flex items-start hover:shadow-md transition-all">
-                    <div className="text-purple-600 text-2xl mr-3 mt-1">{loc.icon}</div>
-                    <div>
-                      <h3 className="font-bold text-gray-800 mb-1">{loc.title}</h3>
-                      <p className="text-gray-600 text-sm">{loc.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-    
-              {/* Description */}
-              <div className="prose max-w-none mb-8">
-                <p className="text-gray-700">
-                  Our expert therapists combine ancient and modern techniques to release stress, improve circulation, and restore balance. From the moment you step inside, you’ll be welcomed into a space of peace, care, and luxury.
-                </p>
-                <p className="text-gray-700">
-                  Whether for pain relief, post-workout recovery, or pure relaxation, our spa treatments are designed around you.
-                </p>
-                <p className="text-gray-700">
-                  Every session ensures hygiene, comfort, and personalized care — because your wellness deserves the best.
-                </p>
-              </div>
-    
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://api.whatsapp.com/send?phone=918826482370"
-                  className="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-full text-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                  Book Via WhatsApp
-                </a>
-                
-                <a
-                  href="/pricing"
-                  className="flex-1 inline-flex items-center justify-center bg-white border-2 border-purple-600 text-purple-700 px-6 py-4 rounded-full text-lg font-medium hover:bg-purple-50 transition-all duration-300 shadow hover:shadow-md"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-10H8v2h2v2h2v-2h2v-2h-2V8h-2v2zm7 5h-7v-2h7v2z"/>
-                  </svg>
-                  View Packages
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     {/* ///// */}
     <section className="relative bg-gradient-to-br from-amber-50 via-rose-50 to-white py-24 px-6 md:px-16 overflow-hidden">
       {/* Decorative blurred circles */}
