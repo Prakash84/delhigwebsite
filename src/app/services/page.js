@@ -374,7 +374,7 @@ n                </a>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <p className="font-semibold">Emma, Premium Plan</p>
-                    <p className="text-sm">"Best decision I've made!"</p>
+                    <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
                   </div>
                 </div>
 
