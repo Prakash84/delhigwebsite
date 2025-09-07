@@ -268,148 +268,176 @@ export default function Services() {
   return (
     <>
     {/* banner */}
-           <div className="relative bg-white py-16 px-6 md:px-12 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-pink-300 rounded-full -translate-x-32 -translate-y-32"></div>
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-300 rounded-full translate-x-40 translate-y-40"></div>
-          </div>
-    
-          {/* Main content grid */}
-          <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text content */}
-            <div className="space-y-8">
-              <div className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 px-6 rounded-full text-sm font-semibold shadow-md">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+               <section className="relative bg-gradient-to-b from-white via-amber-50 to-white/60 py-12 md:py-20 lg:py-28">
+      {/* Decorative blurred shapes */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-6rem] left-0 w-[24rem] h-[24rem] bg-pink-300 rounded-full opacity-20 blur-3xl transform -translate-x-1/3 -translate-y-1/4"></div>
+        <div className="absolute right-0 bottom-[-6rem] w-[28rem] h-[28rem] bg-purple-300 rounded-full opacity-20 blur-3xl transform translate-x-1/3 translate-y-1/4"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Left content */}
+          <div className="lg:col-span-6">
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="space-y-6 lg:pr-8"
+            >
+              <span className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white py-1.5 px-4 rounded-full text-sm font-medium shadow-sm">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a1 1 0 0 0-.707.293l-1.5 1.5A1 1 0 0 0 9 4h6a1 1 0 0 0 .707-1.707l-1.5-1.5A1 1 0 0 0 12 2z" />
                 </svg>
-                Special Launch Offer - 20% Off First Month!
-              </div>
-    
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Pricing That <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">Grows With You</span>
+                Special Launch — 20% OFF
+              </span>
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+                Pricing that <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600">grows with you</span>
               </h1>
-              
-              <p className="text-lg text-gray-600">
-                Choose the perfect plan for your journey. No hidden fees, no complicated terms. Everything you need to succeed in one place.
+
+              <p className="text-gray-600 max-w-xl text-base md:text-lg">
+                Choose a plan that fits your pace. No hidden fees, transparent billing and flexible upgrades — designed for freelancers, teams and
+                studios that want simple, beautiful tools to get results.
               </p>
-              
-              {/* Feature highlights */}
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+
+              <ul className="mt-4 space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 mt-1 w-9 h-9 bg-pink-50 text-pink-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
-                  </div>
-                  <span className="text-gray-700">No credit card required to start</span>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </span>
+                  <span className="text-gray-700">14-day free trial on every plan</span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 mt-1 w-9 h-9 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16z" />
                     </svg>
-                  </div>
-                  <span className="text-gray-700">Free 14-day trial on all plans</span>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </span>
+                  <span className="text-gray-700">Cancel anytime — simple billing</span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 mt-1 w-9 h-9 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2l2 6h6l-4.9 3.6L18 20l-6-4-6 4 1.9-8.4L3 8h6z" />
                     </svg>
-                  </div>
-                  <span className="text-gray-700">Cancel anytime with no questions asked</span>
-                </div>
+                  </span>
+                  <span className="text-gray-700">No credit card needed to start</span>
+                </li>
+              </ul>
+
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-6">
+                <a
+                  href="#plans"
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold px-6 py-3 shadow-lg transform hover:-translate-y-1 transition-transform"
+                  aria-label="Explore plans"
+                >
+                  Explore Plans
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+
+                <a href="#contact" className="inline-flex items-center justify-center rounded-xl border border-gray-200 px-5 py-3 text-gray-700 font-medium shadow-sm">
+                  Talk to Sales
+n                </a>
               </div>
-              
-              {/* CTA Button */}
-              <button className="group mt-8 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold py-4 px-10 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center">
-                Explore Our Plans
-                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </button>
-            </div>
-            
-            {/* Image collage */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                {/* Main image */}
-                <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+
+              <div className="mt-4 text-sm text-gray-500">
+                <strong>Limited time:</strong> 20% off first month. Offer applied at checkout.
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right image collage */}
+          <div className="lg:col-span-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-full"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-tr from-white/40 to-white/10 shadow-xl h-64 md:h-80">
                   <Image
                     src="/images/spaStaffInsta.jpg"
                     alt="Happy customer"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-700 hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <p className="font-semibold">Emma, Premium Plan</p>
-                    <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
+                    <p className="text-sm">"Best decision I've made!"</p>
                   </div>
                 </div>
-                
-                {/* Secondary images */}
+
                 <div className="space-y-4">
-                  {/* <div className="relative h-36 rounded-2xl overflow-hidden shadow-md">
-                    <Image
-                      src="/images/"
-                      alt="Feature preview"
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent"></div>
-                    <div className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md">
-                      <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
-                      </svg>
-                    </div>
-                  </div> */}
-                  
-                  <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
+                  <div className="relative rounded-2xl overflow-hidden bg-white/60 shadow-md h-36 md:h-40">
                     <Image
                       src="/images/1.jpg"
                       alt="Community image"
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-700 hover:scale-105"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 30vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-pink-600/20 to-transparent"></div>
-                    <div className="absolute bottom-2 left-2 flex -space-x-2">
-                      <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-500"></div>
-                      <div className="w-8 h-8 rounded-full border-2 border-white bg-purple-500"></div>
-                      <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-400"></div>
+                    <div className="absolute top-3 right-3 bg-white rounded-full p-1 shadow-sm">
+                      <svg className="w-4 h-4 text-purple-600" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="relative rounded-2xl overflow-hidden bg-white/60 shadow-md h-36 md:h-40">
+                    <Image
+                      src="/images/2.jpg"
+                      alt="Relaxing treatment"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 30vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent"></div>
+                    <div className="absolute bottom-3 left-3 flex -space-x-2">
+                      <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-500" />
+                      <div className="w-8 h-8 rounded-full border-2 border-white bg-purple-500" />
+                      <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-400" />
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
+
+              {/* floating score */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl">
                 <div className="text-center">
                   <div className="font-bold text-2xl text-pink-600">4.9</div>
-                  <div className="flex justify-center">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <div className="flex justify-center mt-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg key={i} className="w-4 h-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
               </div>
-              
+
+              {/* bottom badge */}
               <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
+      </div>
+    </section>
         {/* end banner */}
         {/* content */}
             <section className="bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] py-16 px-4 md:px-8 lg:px-16 relative overflow-hidden">
