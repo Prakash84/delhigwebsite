@@ -7,7 +7,7 @@ import { FaCheck, FaStar, FaCrown, FaPlane, FaGraduationCap, FaGlobeAsia, FaSpa 
 import { FiSearch, FiChevronDown, FiMail, FiMessageSquare, FiHelpCircle } from 'react-icons/fi';
 import { AnimatePresence } from "framer-motion";
 import { FaTelegram } from "react-icons/fa";
-export default function category() {
+export default function Category() {
   {/* staff showcase */}
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = [
@@ -313,7 +313,7 @@ export default function category() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <p className="font-semibold">Emma, Premium Plan</p>
-                    <p className="text-sm">"Best decision I've made!"</p>
+                    <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
                   </div>
                 </div>
                 
@@ -452,7 +452,7 @@ export default function category() {
               <div className="text-gray-600 text-lg leading-relaxed space-y-6">
                 <p>
                   At <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Delhi Body Spa</strong>, 
-                  every treatment is designed to be more than just a service—it's an 
+                  every treatment is designed to be more than just a service—it&apos;s an 
                   experience. Our luxurious spa is a haven for those seeking tranquility, 
                   where elegant interiors blend seamlessly with calming aromas and soothing 
                   melodies.
@@ -1005,9 +1005,9 @@ export default function category() {
                       >
                         <div className="max-w-lg">
                           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                            Escape the city's hustle and indulge in a tranquil haven where
+                            Escape the city&apos;s hustle and indulge in a tranquil haven where
                             serenity meets sophistication. Our premium spa is nestled within
-                            Aerocity's most luxurious 5-star hotels, offering an oasis of calm
+                            Aerocity&apos;s most luxurious 5-star hotels, offering an oasis of calm
                             in the heart of Delhi. We specialize in world-class therapies
                             including{" "}
                             <span className="font-medium text-gray-800">
@@ -1024,9 +1024,9 @@ export default function category() {
                             - all delivered in beautifully designed private sanctuaries.
                           </p>
                           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                            Escape the city's hustle and indulge in a tranquil haven where
+                            Escape the city&apos;s hustle and indulge in a tranquil haven where
                             serenity meets sophistication. Our premium spa is nestled within
-                            Aerocity's most luxurious 5-star hotels, offering an oasis of calm
+                            Aerocity&apos;s most luxurious 5-star hotels, offering an oasis of calm
                             in the heart of Delhi.
                           </p>
                 

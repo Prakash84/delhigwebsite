@@ -12,7 +12,7 @@ import {  Star, MapPin, Sparkles, Hotel, Building2 } from 'lucide-react';
 
 
 
-export default function locations() {
+export default function Locations() {
    // 5 start hotel 
       const [activeHotel, setActiveHotel] = useState(null);
     
@@ -314,7 +314,7 @@ export default function locations() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 text-white">
                         <p className="font-semibold">Emma, Premium Plan</p>
-                        <p className="text-sm">"Best decision I've made!"</p>
+                        <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
                       </div>
                     </div>
                     
@@ -503,7 +503,7 @@ export default function locations() {
         Our 5-Star Hotel Collection
       </h2>
       <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        Discover the world's most exclusive luxury hotels and resorts, each offering unparalleled service and unforgettable experiences.
+        Discover the world&apos;s most exclusive luxury hotels and resorts, each offering unparalleled service and unforgettable experiences.
       </p>
     </motion.div>
 
@@ -705,7 +705,7 @@ export default function locations() {
       <div className="text-gray-600 text-lg leading-relaxed space-y-6">
         <p>
           At <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Delhi Body Spa</strong>, 
-          every treatment is designed to be more than just a service—it's an 
+          every treatment is designed to be more than just a service—it&apos;s an 
           experience. Our luxurious spa is a haven for those seeking tranquility, 
           where elegant interiors blend seamlessly with calming aromas and soothing 
           melodies.
@@ -834,7 +834,7 @@ export default function locations() {
             ))}
           </div>
           <p className="text-gray-600 leading-relaxed">
-            This holistic framework allows us to create treatments that don't just relax temporarily but catalyze lasting change. Our clients report benefits ranging from improved sleep patterns to reduced chronic pain months after their visits.
+            This holistic framework allows us to create treatments that don&apos;t just relax temporarily but catalyze lasting change. Our clients report benefits ranging from improved sleep patterns to reduced chronic pain months after their visits.
           </p>
           <div className="mt-6">
             <span className="inline-block bg-purple-100 text-purple-700 py-1 px-4 rounded-full text-sm font-medium">
@@ -904,7 +904,7 @@ export default function locations() {
             <h2 className="text-3xl font-bold text-purple-800">Top Rated Services</h2>
           </div>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Our commitment extends beyond individual wellness to planetary health. We're proud to be the first Carbon Neutral spa in our region, with initiatives including:
+            Our commitment extends beyond individual wellness to planetary health. We&apos;re proud to be the first Carbon Neutral spa in our region, with initiatives including:
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
             {[
@@ -920,7 +920,7 @@ export default function locations() {
             ))}
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Our product line features sustainably harvested ingredients from ethical cooperatives. We've partnered with local environmental initiatives, donating 5% of profits to wetland conservation.
+            Our product line features sustainably harvested ingredients from ethical cooperatives. We&apos;ve partnered with local environmental initiatives, donating 5% of profits to wetland conservation.
           </p>
           <div className="mt-6">
             <span className="inline-block bg-purple-100 text-purple-700 py-1 px-4 rounded-full text-sm font-medium">
@@ -988,7 +988,7 @@ export default function locations() {
             Every visit begins with a confidential wellness consultation where our specialists listen to your concerns and goals. We create a truly personalized treatment plan that restores balance.
           </p>
           <p className="opacity-90">
-            Our exclusive loyalty program offers priority booking, complimentary upgrades, and special members-only events. Corporate wellness packages are available for businesses looking to invest in their team's wellbeing.
+            Our exclusive loyalty program offers priority booking, complimentary upgrades, and special members-only events. Corporate wellness packages are available for businesses looking to invest in their team&apos;s wellbeing.
           </p>
         </div>
         <div className="flex justify-center">

@@ -20,13 +20,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    { name: "Foreign Model", href: "/category/Foreign" },
-    { name: "Air Hostess", href: "/category/airhostess" },
-    { name: "Independent Indian Profile", href: "/category/independentindianprofile" },
-    { name: "Russian Model", href: "/category/russianmodel" },
-    { name: "Celebrity Profile", href: "/category/celebrityprofile" },
-    { name: "Spa Staff", href: "/category/spastaff" },
+  const Services = [
+    { name: "Foreign Model", href: "/Category/Foreign" },
+    { name: "Air Hostess", href: "/Category/airhostess" },
+    { name: "Independent Indian Profile", href: "/Category/independentindianprofile" },
+    { name: "Russian Model", href: "/Category/russianmodel" },
+    { name: "Celebrity Profile", href: "/Category/celebrityprofile" },
+    { name: "Spa Staff", href: "/Category/spastaff" },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Navbar() {
             onMouseLeave={() => setIsServicesOpen(false)}
           >
             <Link 
-              href="/category" // <-- यहां तू default category page ka route दे
+              href="/Category" // <-- यहां तू default category page ka route दे
               className="flex items-center gap-1 hover:text-pink-600 transition"
             >
               Categories <ChevronDown className="w-4 h-4" />
@@ -68,7 +68,7 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="absolute top-8 left-0 bg-white rounded-xl shadow-lg p-4 space-y-2 w-56"
                 >
-                  {services.map((item, idx) => (
+                  {Services.map((item, idx) => (
                     <Link
                       key={idx}
                       href={item.href}
@@ -82,16 +82,16 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <Link href="/pricing" className="hover:text-pink-600 transition">
+          <Link href="/Pricing" className="hover:text-pink-600 transition">
             Pricing
           </Link>
-          <Link href="/blogs" className="hover:text-pink-600 transition">
+          <Link href="/Blogs" className="hover:text-pink-600 transition">
             Blog
           </Link>
-          <Link href="/services" className="hover:text-pink-600 transition">
+          <Link href="/Services" className="hover:text-pink-600 transition">
             Services
           </Link>
-           <Link href="/locations" className="hover:text-pink-600 transition">
+           <Link href="/Locations" className="hover:text-pink-600 transition">
             Locations
           </Link>
 
@@ -141,7 +141,7 @@ export default function Navbar() {
               {/* Services inside mobile */}
               <div>
                 <Link 
-                  href="/category" // <-- यहां भी default page का route दे
+                  href="/Category" // <-- यहां भी default page का route दे
                   className="flex items-center gap-1 w-full text-left"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -155,7 +155,7 @@ export default function Navbar() {
                       exit={{ opacity: 0, y: -5 }}
                       className="ml-4 mt-2 space-y-2"
                     >
-                      {services.map((item, idx) => (
+                      {Services.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
@@ -171,16 +171,16 @@ export default function Navbar() {
               </div>
 
               
-              <Link href="/pricing" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/Pricing" onClick={() => setIsMenuOpen(false)}>
                 Pricing
               </Link>
-              <Link href="/blogs" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/Blogs" onClick={() => setIsMenuOpen(false)}>
                 Blog
               </Link>
-              <Link href="/services" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/Services" onClick={() => setIsMenuOpen(false)}>
                 Services
               </Link>
-              <Link href="/locations" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/Locations" onClick={() => setIsMenuOpen(false)}>
                 Locations
               </Link>
 

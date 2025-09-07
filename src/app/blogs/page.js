@@ -89,7 +89,7 @@ const posts = [
 const chipBase =
   "px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300";
 // end blogs section
-export default function blogs() {
+export default function Blogs() {
    const [isVisible, setIsVisible] = useState(false);
    useEffect(() => {
       setIsVisible(true);
@@ -268,7 +268,7 @@ export default function blogs() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 text-white">
                         <p className="font-semibold">Emma, Premium Plan</p>
-                        <p className="text-sm">"Best decision I've made!"</p>
+                        <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
                       </div>
                     </div>
                     

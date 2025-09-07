@@ -718,7 +718,7 @@ export default function Home() {
             Delhi Fashion Revolution
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover the vibrant style culture of India's capital. Empowerment through fashion, beauty, and community.
+            Discover the vibrant style culture of India&apos;s capital. Empowerment through fashion, beauty, and community.
           </p>
         </motion.div>
         </div>
@@ -1392,7 +1392,7 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Delhi's Fashion Revolution
+            Delhi&apos;s Fashion Revolution
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             How the Capital is Redefining Style and Empowerment
@@ -1436,32 +1436,32 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-                The Evolution of Delhi's Fashion Identity
+                The Evolution of Delhi&apos;s Fashion Identity
               </h3>
               
               <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
                 <p>
-                  Delhi's fashion landscape has transformed dramatically over the past decade. What began as a fusion of traditional Punjabi suits and Western influences has evolved into a distinctive style that celebrates diversity and individuality. The city's unique fashion identity reflects its complex history, with Mughal-era craftsmanship blending seamlessly with contemporary silhouettes.
+                  Delhi&apos;s fashion landscape has transformed dramatically over the past decade. What began as a fusion of traditional Punjabi suits and Western influences has evolved into a distinctive style that celebrates diversity and individuality. The city&apos;s unique fashion identity reflects its complex history, with Mughal-era craftsmanship blending seamlessly with contemporary silhouettes.
                 </p>
                 
                 <p>
-                  The rise of local designers like Masaba Gupta and Ritu Kumar has put Delhi on the global fashion map. These designers draw inspiration from Delhi's vibrant street culture, historic monuments, and multicultural neighborhoods. The result is a fashion scene that honors heritage while embracing innovation. Young Delhiites are increasingly mixing traditional fabrics like Banarasi silk with modern cuts, creating looks that are both rooted and revolutionary.
+                  The rise of local designers like Masaba Gupta and Ritu Kumar has put Delhi on the global fashion map. These designers draw inspiration from Delhi&apos;s vibrant street culture, historic monuments, and multicultural neighborhoods. The result is a fashion scene that honors heritage while embracing innovation. Young Delhiites are increasingly mixing traditional fabrics like Banarasi silk with modern cuts, creating looks that are both rooted and revolutionary.
                 </p>
                 
                 <p>
-                  Social media has played a crucial role in this evolution. Delhi's fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities. This digital democratization of style has empowered women across socioeconomic backgrounds to participate in fashion conversations.
+                  Social media has played a crucial role in this evolution. Delhi&apos;s fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities. This digital democratization of style has empowered women across socioeconomic backgrounds to participate in fashion conversations.
                 </p>
                 
                 <p>
-                  Seasonal fashion in Delhi requires special consideration due to its extreme climate. Summer months demand lightweight fabrics like cotton and linen, while winter calls for luxurious wools and pashminas. The monsoon season presents unique challenges that Delhi designers have turned into opportunities, creating waterproof versions of traditional garments and innovative rainwear that doesn't sacrifice style for functionality.
+                  Seasonal fashion in Delhi requires special consideration due to its extreme climate. Summer months demand lightweight fabrics like cotton and linen, while winter calls for luxurious wools and pashminas. The monsoon season presents unique challenges that Delhi designers have turned into opportunities, creating waterproof versions of traditional garments and innovative rainwear that doesn&apos;t sacrifice style for functionality.
                 </p>
                 
                 <p>
-                  Delhi's markets tell the story of its fashion evolution. From the wholesale fabric markets of Gandhi Nagar to the designer boutiques of Hauz Khas Village, each offers a different perspective on Delhi style. Chandni Chowk remains the heart of traditional bridal fashion, while Mehrauli has emerged as a hub for sustainable and ethical fashion brands. These diverse shopping destinations reflect the multifaceted nature of Delhi's fashion identity.
+                  Delhi&apos;s markets tell the story of its fashion evolution. From the wholesale fabric markets of Gandhi Nagar to the designer boutiques of Hauz Khas Village, each offers a different perspective on Delhi style. Chandni Chowk remains the heart of traditional bridal fashion, while Mehrauli has emerged as a hub for sustainable and ethical fashion brands. These diverse shopping destinations reflect the multifaceted nature of Delhi&apos;s fashion identity.
                 </p>
                 
                 <p>
-                  Sustainability has become a significant focus in recent years. Delhi-based designers are pioneering zero-waste patterns, upcycling vintage textiles, and reviving traditional dyeing techniques that minimize environmental impact. Consumers are increasingly supporting brands with transparent supply chains, reflecting a growing consciousness about fashion's ecological footprint. This movement represents a return to Delhi's roots when clothing was valued for craftsmanship and longevity.
+                  Sustainability has become a significant focus in recent years. Delhi-based designers are pioneering zero-waste patterns, upcycling vintage textiles, and reviving traditional dyeing techniques that minimize environmental impact. Consumers are increasingly supporting brands with transparent supply chains, reflecting a growing consciousness about fashion&apos;s ecological footprint. This movement represents a return to Delhi&apos;s roots when clothing was valued for craftsmanship and longevity.
                 </p>
               </div>
               
@@ -1529,7 +1529,7 @@ export default function Home() {
         Our 5-Star Hotel Collection
       </h2>
       <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        Discover the world's most exclusive luxury hotels and resorts, each offering unparalleled service and unforgettable experiences.
+        Discover the world&apos;s most exclusive luxury hotels and resorts, each offering unparalleled service and unforgettable experiences.
       </p>
     </motion.div>
 
@@ -1761,15 +1761,15 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">The Evolution of Delhi's Fashion Identity</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4">The Evolution of Delhi&apos;s Fashion Identity</h3>
                 <p className="mb-6">
-                  Delhi's fashion landscape has transformed dramatically over the past decade. What began as a fusion of traditional Punjabi suits and Western influences has evolved into a distinctive style that celebrates diversity and individuality. The city's unique fashion identity reflects its complex history, with Mughal-era craftsmanship blending seamlessly with contemporary silhouettes.
+                  Delhi&apos;s fashion landscape has transformed dramatically over the past decade. What began as a fusion of traditional Punjabi suits and Western influences has evolved into a distinctive style that celebrates diversity and individuality. The city&apos;s unique fashion identity reflects its complex history, with Mughal-era craftsmanship blending seamlessly with contemporary silhouettes.
                 </p>
                 <p className="mb-6">
-                  The rise of local designers like Masaba Gupta and Ritu Kumar has put Delhi on the global fashion map. These designers draw inspiration from Delhi's vibrant street culture, historic monuments, and multicultural neighborhoods. The result is a fashion scene that honors heritage while embracing innovation.
+                  The rise of local designers like Masaba Gupta and Ritu Kumar has put Delhi on the global fashion map. These designers draw inspiration from Delhi&apos;s vibrant street culture, historic monuments, and multicultural neighborhoods. The result is a fashion scene that honors heritage while embracing innovation.
                 </p>
                 <p className="mb-6">
-                  Social media has played a crucial role in this evolution. Delhi's fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities.
+                  Social media has played a crucial role in this evolution. Delhi&apos;s fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities.
                 </p>
                 <button className="px-6 py-3 bg-white text-purple-700 font-bold rounded-lg hover:bg-gray-100 transition-colors">
                   Read Full Story

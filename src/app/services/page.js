@@ -8,7 +8,7 @@ import { FiSearch, FiChevronDown, FiMail, FiMessageSquare, FiHelpCircle } from '
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 
-export default function services() {
+export default function Services() {
   
   const [isVisible, setIsVisible] = useState(false);
  useEffect(() => {
@@ -348,7 +348,7 @@ export default function services() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <p className="font-semibold">Emma, Premium Plan</p>
-                    <p className="text-sm">"Best decision I've made!"</p>
+                    <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
                   </div>
                 </div>
                 
@@ -521,9 +521,9 @@ export default function services() {
       >
         <div className="max-w-lg">
           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-            Escape the city's hustle and indulge in a tranquil haven where
+            Escape the city&apos;s hustle and indulge in a tranquil haven where
             serenity meets sophistication. Our premium spa is nestled within
-            Aerocity's most luxurious 5-star hotels, offering an oasis of calm
+            Aerocity&apos;s most luxurious 5-star hotels, offering an oasis of calm
             in the heart of Delhi. We specialize in world-class therapies
             including{" "}
             <span className="font-medium text-gray-800">
@@ -540,9 +540,9 @@ export default function services() {
             - all delivered in beautifully designed private sanctuaries.
           </p>
           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-            Escape the city's hustle and indulge in a tranquil haven where
+            Escape the city&apos;s hustle and indulge in a tranquil haven where
             serenity meets sophistication. Our premium spa is nestled within
-            Aerocity's most luxurious 5-star hotels, offering an oasis of calm
+            Aerocity&apos;s most luxurious 5-star hotels, offering an oasis of calm
             in the heart of Delhi.
           </p>
 
@@ -611,7 +611,7 @@ export default function services() {
             Delhi Fashion Revolution
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover the vibrant style culture of India's capital. Empowerment through fashion, beauty, and community.
+            Discover the vibrant style culture of India&apos;s capital. Empowerment through fashion, beauty, and community.
           </p>
         </motion.div>
         </div>
@@ -968,7 +968,7 @@ export default function services() {
             ))}
           </div>
           <p className="text-gray-600 leading-relaxed">
-            This holistic framework allows us to create treatments that don't just relax temporarily but catalyze lasting change. Our clients report benefits ranging from improved sleep patterns to reduced chronic pain months after their visits.
+            This holistic framework allows us to create treatments that don&apos;t just relax temporarily but catalyze lasting change. Our clients report benefits ranging from improved sleep patterns to reduced chronic pain months after their visits.
           </p>
           <div className="mt-6">
             <span className="inline-block bg-purple-100 text-purple-700 py-1 px-4 rounded-full text-sm font-medium">
@@ -1038,7 +1038,7 @@ export default function services() {
             <h2 className="text-3xl font-bold text-purple-800">Top Rated Services</h2>
           </div>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Our commitment extends beyond individual wellness to planetary health. We're proud to be the first Carbon Neutral spa in our region, with initiatives including:
+            Our commitment extends beyond individual wellness to planetary health. We&apos;re proud to be the first Carbon Neutral spa in our region, with initiatives including:
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
             {[
@@ -1054,7 +1054,7 @@ export default function services() {
             ))}
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Our product line features sustainably harvested ingredients from ethical cooperatives. We've partnered with local environmental initiatives, donating 5% of profits to wetland conservation.
+            Our product line features sustainably harvested ingredients from ethical cooperatives. We&apos;ve partnered with local environmental initiatives, donating 5% of profits to wetland conservation.
           </p>
           <div className="mt-6">
             <span className="inline-block bg-purple-100 text-purple-700 py-1 px-4 rounded-full text-sm font-medium">
@@ -1122,7 +1122,7 @@ export default function services() {
             Every visit begins with a confidential wellness consultation where our specialists listen to your concerns and goals. We create a truly personalized treatment plan that restores balance.
           </p>
           <p className="opacity-90">
-            Our exclusive loyalty program offers priority booking, complimentary upgrades, and special members-only events. Corporate wellness packages are available for businesses looking to invest in their team's wellbeing.
+            Our exclusive loyalty program offers priority booking, complimentary upgrades, and special members-only events. Corporate wellness packages are available for businesses looking to invest in their team&apos;s wellbeing.
           </p>
         </div>
         <div className="flex justify-center">

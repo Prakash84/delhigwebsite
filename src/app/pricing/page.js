@@ -7,7 +7,7 @@ import { FaCheck, FaStar, FaCrown, FaPlane, FaGraduationCap, FaGlobeAsia, FaSpa 
 import { FiSearch, FiChevronDown, FiMail, FiMessageSquare, FiHelpCircle } from 'react-icons/fi';
 import { AnimatePresence } from "framer-motion";
 
-export default function pricing() {
+export default function Pricing() {
   
     {/* staff showcase */}
       const [activeCategory, setActiveCategory] = useState('all');
@@ -314,7 +314,7 @@ export default function pricing() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
                 <p className="font-semibold">Emma, Premium Plan</p>
-                <p className="text-sm">"Best decision I've made!"</p>
+                <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
               </div>
             </div>
             
@@ -1183,7 +1183,7 @@ export default function pricing() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Personalized Learning Paths</h3>
                 <p className="text-gray-700">
-                  Our platform offers customized learning experiences tailored to each girl's interests and goals. Whether you're interested in coding, art, science, or entrepreneurship, we create a personalized journey that adapts to your pace and preferences. With regular assessments and feedback, we ensure you're always challenged but never overwhelmed.
+                  Our platform offers customized learning experiences tailored to each girl&apos;s interests and goals. Whether you&apos;re interested in coding, art, science, or entrepreneurship, we create a personalized journey that adapts to your pace and preferences. With regular assessments and feedback, we ensure you&apos;re always challenged but never overwhelmed.
                 </p>
               </div>
             </div>
@@ -1198,7 +1198,7 @@ export default function pricing() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Supportive Community</h3>
                 <p className="text-gray-700">
-                  Join a vibrant community of like-minded girls who support and inspire each other. Our platform includes mentorship programs, group projects, and discussion forums where you can share ideas, ask questions, and collaborate on projects. We've created a safe, moderated space where girls can connect without worrying about negativity or judgment.
+                  Join a vibrant community of like-minded girls who support and inspire each other. Our platform includes mentorship programs, group projects, and discussion forums where you can share ideas, ask questions, and collaborate on projects. We&apos;ve created a safe, moderated space where girls can connect without worrying about negativity or judgment.
                 </p>
               </div>
             </div>
@@ -1228,7 +1228,7 @@ export default function pricing() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Progress Tracking & Recognition</h3>
                 <p className="text-gray-700">
-                  Our platform includes comprehensive tools to track your progress and celebrate your achievements. Earn badges, complete levels, and receive certificates as you master new skills. With detailed analytics, you can see how far you've come and identify areas for growth. We believe in recognizing effort and accomplishment to keep you motivated on your learning journey.
+                  Our platform includes comprehensive tools to track your progress and celebrate your achievements. Earn badges, complete levels, and receive certificates as you master new skills. With detailed analytics, you can see how far you&apos;ve come and identify areas for growth. We believe in recognizing effort and accomplishment to keep you motivated on your learning journey.
                 </p>
               </div>
             </div>
@@ -1250,10 +1250,10 @@ export default function pricing() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Flexible Plans for Every Need</h3>
               <p className="text-gray-700 mb-4">
-                We offer multiple subscription tiers to accommodate different budgets and learning goals. Whether you're looking for basic access or premium features, we have a plan that will work for you. Our free tier provides substantial value, while our premium plans unlock advanced features and exclusive content.
+                We offer multiple subscription tiers to accommodate different budgets and learning goals. Whether you&apos;re looking for basic access or premium features, we have a plan that will work for you. Our free tier provides substantial value, while our premium plans unlock advanced features and exclusive content.
               </p>
               <p className="text-gray-700">
-                All plans include our core features, with premium options adding specialized courses, one-on-one mentoring, and early access to new content. We regularly update our offerings based on member feedback to ensure we're providing the most valuable experience possible.
+                All plans include our core features, with premium options adding specialized courses, one-on-one mentoring, and early access to new content. We regularly update our offerings based on member feedback to ensure we&apos;re providing the most valuable experience possible.
               </p>
             </div>
           </div>
