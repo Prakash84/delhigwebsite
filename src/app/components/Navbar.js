@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-pink-600">
-          Dlehi Girls
+          Delhi Girls
         </Link>
 
         {/* Desktop Menu */}

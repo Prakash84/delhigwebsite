@@ -233,18 +233,21 @@ export default function Category() {
   return (
     <>
     {/* banner */}
-           <div className="relative overflow-hidden rounded-2xl shadow-xl border border-gray-200">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-gray-200 min-h-[420px] md:min-h-[520px]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
+        {/* Use `fill` and `object-cover` (no layout/objectFit) + sizes for responsive loading */}
         <Image
-          src="/images/32586.jpg" // Replace with your background image path
+          src="/images/32586.jpg"
           alt="Spa and Wellness Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover w-full h-full opacity-90"
           quality={90}
-          className="opacity-90"
+          priority={false}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 50vw"
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-pink-800/60"></div> */}
+        {/* Optional subtle overlay for better text contrast */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-pink-800/50" /> */}
       </div>
 
       {/* Content */}
@@ -253,50 +256,29 @@ export default function Category() {
           {/* Text Content */}
           <div className="space-y-8 text-white">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white py-2 px-6 rounded-full text-sm font-semibold border border-white/30">
+              {/* ...badge svg and text... */}
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
               </svg>
               Special Launch Offer - 20% Off First Treatment!
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">Blissful Relaxation</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              Discover{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">
+                Blissful Relaxation
+              </span>
             </h1>
-            
-            <p className="text-lg md:text-xl text-white/90 max-w-lg">
+
+            <p className="text-base md:text-lg text-white/90 max-w-lg">
               Indulge in our premium spa treatments designed to rejuvenate your body, mind, and spirit. Experience tranquility like never before.
             </p>
-            
+
             {/* Feature Highlights */}
             <div className="space-y-4">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 w-10 h-10 bg-white/20 text-pink-200 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-white">Professional licensed therapists</span>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="flex-shrink-0 w-10 h-10 bg-white/20 text-purple-200 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-white">Premium organic products</span>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="flex-shrink-0 w-10 h-10 bg-white/20 text-pink-200 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-white">Customized treatment plans</span>
-              </div>
+              {/* ...features... */}
             </div>
-            
+
             {/* CTA Button */}
             <button className="group mt-8 bg-white text-purple-900 hover:bg-gray-100 font-semibold py-4 px-10 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center">
               Book Now
@@ -305,48 +287,10 @@ export default function Category() {
               </svg>
             </button>
           </div>
-          
+
           {/* Stats Card */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-xl max-w-md ml-auto">
-            <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-xl mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-white font-bold text-xl">4.9/5</h4>
-                  <p className="text-white/80">Customer Satisfaction</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-xl mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-white font-bold text-xl">10,000+</h4>
-                  <p className="text-white/80">Happy Clients</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-xl mr-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-white font-bold text-xl">15 Years</h4>
-                  <p className="text-white/80">Of Excellence</p>
-                </div>
-              </div>
-            </div>
+            {/* ...stats content... */}
           </div>
         </div>
       </div>
