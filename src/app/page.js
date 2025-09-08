@@ -416,72 +416,76 @@ export default function Home() {
     <>
     {/* Banner */}
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-800">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-purple-500/20 rounded-full mix-blend-soft-light blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-pink-500/20 rounded-full mix-blend-soft-light blur-3xl"></div>
+      {/* Background elements - hide on small screens for clarity */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="hidden md:block absolute top-20 left-10 w-56 h-56 bg-purple-500/20 rounded-full mix-blend-soft-light blur-3xl" />
+        <div className="hidden md:block absolute bottom-20 right-10 w-72 h-72 bg-pink-500/20 rounded-full mix-blend-soft-light blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center md:text-left"
           >
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            <motion.h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Transform Your <span className="bg-gradient-to-r from-rose-400 to-orange-300 text-transparent bg-clip-text">Digital Experience</span>
+              Transform Your{" "}
+              <span className="bg-gradient-to-r from-rose-400 to-orange-300 text-transparent bg-clip-text">
+                Digital Experience
+              </span>
             </motion.h1>
-            
-            <motion.p 
-              className="mt-6 text-xl text-gray-200 max-w-xl"
+
+            <motion.p
+              className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-200 max-w-xl mx-auto md:mx-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Discover innovative solutions tailored to your needs. Join thousands of satisfied clients worldwide.
+              Discover innovative solutions tailored to your needs. Join thousands
+              of satisfied clients worldwide.
             </motion.p>
-            
-            <motion.div 
-              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+
+            <motion.div
+              className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3.5 bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Get Started
               </motion.button>
-              
+
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3.5 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-6 py-3.5 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
                 Live Demo
               </motion.button>
             </motion.div>
-            
-            <motion.div 
-              className="mt-12 flex flex-wrap justify-center md:justify-start gap-6"
+
+            <motion.div
+              className="mt-8 sm:mt-10 flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               {[...Array(4)].map((_, i) => (
-                <div key={i} className="flex items-center">
-                  <div className="bg-green-400 w-3 h-3 rounded-full mr-2 animate-pulse"></div>
-                  <span className="text-gray-200 font-medium">Feature {i+1}</span>
+                <div key={i} className="flex items-center space-x-2">
+                  <div className="bg-green-400 w-2.5 h-2.5 rounded-full mr-1 animate-pulse" />
+                  <span className="text-gray-200 font-medium text-sm">Feature {i + 1}</span>
                 </div>
               ))}
             </motion.div>
@@ -489,38 +493,38 @@ export default function Home() {
 
           {/* Illustration */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.7 }}
-            className="flex justify-center"
+            className="flex justify-center md:justify-end"
           >
-            <div className="relative w-full max-w-md">
-              <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl">
-                {/* <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm"></div> */}
+            <div className="relative w-full max-w-sm sm:max-w-md">
+              <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black/5">
                 <Image
-                  src="/images/Celebrity_girl.jpg" // Replace with your image path
+                  src="/images/Celebrity_girl.jpg" // replace path if needed
                   alt="Digital Experience"
-                  width={500}
-                  height={500}
-                  className="object-contain p-8"
+                  width={800}
+                  height={800}
+                  className="object-contain w-full h-full p-6"
+                  priority={true}
                 />
               </div>
-              
-              {/* Floating elements */}
+
+              {/* Floating elements - reposition or hide on small screens */}
               <motion.div
-                animate={{ y: [0, -15, 0] }}
+                animate={{ y: [0, -12, 0] }}
                 transition={{ repeat: Infinity, duration: 4 }}
-                className="absolute -top-6 -left-6 bg-rose-500 w-16 h-16 rounded-2xl shadow-xl flex items-center justify-center"
+                className="hidden sm:flex absolute -top-5 -left-5 bg-rose-500 w-14 h-14 rounded-2xl shadow-xl flex items-center justify-center"
               >
-                <span className="text-white font-bold">95%</span>
+                <span className="text-white font-bold text-sm sm:text-base">95%</span>
               </motion.div>
-              
+
               <motion.div
-                animate={{ y: [0, 15, 0] }}
+                animate={{ y: [0, 12, 0] }}
                 transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
-                className="absolute -bottom-6 -right-6 bg-indigo-500 w-16 h-16 rounded-full shadow-xl flex items-center justify-center"
+                className="absolute -bottom-5 -right-5 bg-indigo-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-xl flex items-center justify-center"
               >
-                <span className="text-white font-bold">24/7</span>
+                <span className="text-white font-bold text-xs sm:text-sm">24/7</span>
               </motion.div>
             </div>
           </motion.div>

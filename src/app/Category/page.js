@@ -237,7 +237,7 @@ export default function Category() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/6637.jpg" // Replace with your background image path
+          src="/images/32586.jpg" // Replace with your background image path
           alt="Spa and Wellness Background"
           layout="fill"
           objectFit="cover"
