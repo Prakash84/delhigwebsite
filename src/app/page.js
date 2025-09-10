@@ -10,8 +10,8 @@ import { Sparkles, Camera, MapPin } from "lucide-react";
 
 
 export default function Home({
-  images = ['/images/7168.jpg'], // keep single image or pass swiper images externally
-  imageUrl = '/images/7168.jpg',
+  images = ['/images/6631.jpg'], // keep single image or pass swiper images externally
+  imageUrl = '/images/6631.jpg',
   title = 'Luxury Companion Services',
   subtitle = 'Experience elegance, discretion & premium companionship',
   cta = 'Book Now',
@@ -422,15 +422,30 @@ export default function Home({
   const filteredArticles = activeCategory === 'all' 
     ? articles 
     : articles.filter(article => article.category === activeCategory);
+  {/* End Sample content data */}
+  const cities = [
+{ name: 'DELHI', img: '/images/hotel3.webp' },
+{ name: 'MUMBAI', img: '/images/lajpatnagahotel.avif' },
+{ name: 'NOIDA', img: '/images/RoseateHouse.jpg' },
+{ name: 'BANGALORE', img: '/images/paschimvihar.jpg' },
+{ name: 'PUNE', img: '/images/JwMarriott_CP.jpg' },
+{ name: 'AHMEDABAD', img: '/images/Andazhat.jpg' },
+{ name: 'GURGAON', img: '/images/holidayIn_CP.jpg' },
+{ name: 'HYDERABAD', img: '/images/tajmahalhotel_lajpatnagar.jpg' },
+{ name: 'KOLKATA', img: '/images/paschimvihar.jpg' },
+{ name: 'CHENNAI', img: '/images/hotel2.jpg' },
+{ name: 'CHANDIGARH', img: '/images/pullmanAerocity.jpg' },
+{ name: 'JAIPUR', img: '/images/jwmarriott.jpeg' },
+]
 
   return (
     <>
     {/* Banner */}
-    <section className="relative w-full">
+    <section className="relative w-full py-20">
       {/* Background image with dark gradient overlay */}
       <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl">
         {/* Responsive height: mobile 60vh, md 80vh, lg 90vh */}
-        <div className="relative h-[60vh] md:h-[80vh] lg:h-[90vh] w-full">
+        <div className="relative h-[60vh] md:h-[80vh] lg:h-[100vh] w-full">
           <Image
             src={imageUrl}
             alt="Luxury model"
@@ -807,6 +822,71 @@ export default function Home({
       </div>
     </div>
     {/* End Staff Showcase */}
+    {/* Location */}
+    <section className="py-12 bg-gray-50">
+<div className="max-w-7xl mx-auto px-6">
+  <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            Our Premium Location
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Meet our diverse team of professionals who bring excellence and passion to every engagement.
+          </p>
+        </motion.div>
+
+
+
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+{cities.map((c, i) => (
+<motion.a
+key={c.name}
+href={`#/cities/${c.name.toLowerCase()}`}
+initial={{ opacity: 0, y: 8 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ delay: i * 0.04, duration: 0.35 }}
+className="group block rounded-2xl overflow-hidden shadow-lg relative transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 bg-white"
+>
+<div className="relative w-full h-44 sm:h-48 lg:h-52">
+<Image
+src={c.img}
+alt={c.name}
+fill
+sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+style={{ objectFit: 'cover' }}
+className="group-hover:scale-105 transition-transform duration-500"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
+</div>
+
+
+<div className="absolute left-0 right-0 bottom-4 px-4 text-center">
+<span className="text-white text-lg sm:text-xl font-semibold tracking-wider drop-shadow-lg uppercase">{c.name}</span>
+</div>
+</motion.a>
+))}
+</div>
+
+
+<div className="flex justify-center mt-10">
+<a
+href="#/cities"
+className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all"
+>
+View All Cities
+<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+
+    {/* End Location */}
     {/* About Section */}
                         <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] relative overflow-hidden">
           {/* Decorative Elements */}
