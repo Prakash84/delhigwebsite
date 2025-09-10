@@ -9,7 +9,13 @@ import { FiSearch, FiChevronDown, FiMail, FiMessageSquare, FiHelpCircle } from '
 import { Sparkles, Camera, MapPin } from "lucide-react";
 
 
-export default function Home() {
+export default function Home({
+imageUrl = '/images/6631.jpg', // replace with your stock image path or external URL
+title = 'Luxury Companion Services',
+subtitle = 'Experience elegance, discretion & premium companionship',
+cta = 'Book Now',
+ctaHref = '#',
+}) {
   const [isVisible, setIsVisible] = useState(false);
    useEffect(() => {
       setIsVisible(true);
@@ -415,122 +421,107 @@ export default function Home() {
   return (
     <>
     {/* Banner */}
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-800">
-      {/* Background elements - hide on small screens for clarity */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="hidden md:block absolute top-20 left-10 w-56 h-56 bg-purple-500/20 rounded-full mix-blend-soft-light blur-3xl" />
-        <div className="hidden md:block absolute bottom-20 right-10 w-72 h-72 bg-pink-500/20 rounded-full mix-blend-soft-light blur-3xl" />
-      </div>
+    <section className="relative w-full">
+      {/* Background image with dark gradient overlay */}
+     <div className="relative min-h-screen w-full overflow-hidden rounded-2xl shadow-2xl">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-          {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center md:text-left"
-          >
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Transform Your{" "}
-              <span className="bg-gradient-to-r from-rose-400 to-orange-300 text-transparent bg-clip-text">
-                Digital Experience
-              </span>
-            </motion.h1>
+        <Image
+          src={imageUrl}
+          alt="Luxury model"
+          fill
+          priority
+          className="object-cover object-center filter brightness-90"
+        />
 
-            <motion.p
-              className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-200 max-w-xl mx-auto md:mx-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Discover innovative solutions tailored to your needs. Join thousands
-              of satisfied clients worldwide.
-            </motion.p>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-            <motion.div
-              className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-rose-500 to-orange-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-6 py-3.5 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
-              >
-                Live Demo
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              className="mt-8 sm:mt-10 flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="flex items-center space-x-2">
-                  <div className="bg-green-400 w-2.5 h-2.5 rounded-full mr-1 animate-pulse" />
-                  <span className="text-gray-200 font-medium text-sm">Feature {i + 1}</span>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Illustration */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.7 }}
-            className="flex justify-center md:justify-end"
-          >
-            <div className="relative w-full max-w-sm sm:max-w-md">
-              <div className="relative aspect-square rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black/5">
-                <Image
-                  src="/images/Celebrity_girl.jpg" // replace path if needed
-                  alt="Digital Experience"
-                  width={800}
-                  height={800}
-                  className="object-contain w-full h-full p-6"
-                  priority={true}
-                />
-              </div>
-
-              {/* Floating elements - reposition or hide on small screens */}
+        {/* Content container */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-6 md:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              {/* Left side - text */}
               <motion.div
-                animate={{ y: [0, -12, 0] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="hidden sm:flex absolute -top-5 -left-5 bg-rose-500 w-14 h-14 rounded-2xl shadow-xl flex items-center justify-center"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7 }}
+                className="text-white max-w-2xl"
               >
-                <span className="text-white font-bold text-sm sm:text-base">95%</span>
+                <p className="inline-block px-3 py-1 rounded-full bg-white/10 text-sm mb-4">Premium • Discreet • Verified</p>
+                <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mt-2">
+                  {title}
+                </h1>
+                <p className="mt-4 text-lg md:text-xl text-white/90">{subtitle}</p>
+
+                <div className="mt-8 flex items-center gap-4">
+                  <a
+                    href={ctaHref}
+                    className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold shadow-lg transform transition hover:scale-105"
+                    aria-label="Book now"
+                  >
+                    {cta}
+                  </a>
+
+                  <a
+                    href="#services"
+                    className="text-sm text-white/90 underline underline-offset-4"
+                  >
+                    View Services
+                  </a>
+                </div>
+
+                {/* small trust badges */}
+                <div className="mt-6 flex gap-3 items-center text-sm text-white/80">
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-green-400 inline-block" />
+                    <span>Verified Profiles</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-yellow-400 inline-block" />
+                    <span>24/7 Support</span>
+                  </div>
+                </div>
               </motion.div>
 
+              {/* Right side - subtle framed card (visible on md+) */}
               <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
-                className="absolute -bottom-5 -right-5 bg-indigo-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-xl flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="hidden md:flex justify-end"
               >
-                <span className="text-white font-bold text-xs sm:text-sm">24/7</span>
+                <div className="w-[360px] rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 shadow-xl">
+                  <div className="relative h-[480px] w-full">
+                    <Image
+                      src={imageUrl}
+                      alt="Model cropped"
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Small responsive strip CTA for mobile */}
+      <div className="mt-4 md:mt-6 container mx-auto px-6 md:px-12">
+        <div className="flex items-center justify-between gap-4 bg-white rounded-full px-4 py-3 shadow-sm md:hidden">
+          <div>
+            <p className="text-sm font-semibold">{title}</p>
+            <p className="text-xs text-gray-600">{subtitle}</p>
+          </div>
+          <a
+            href={ctaHref}
+            className="inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white font-medium"
+          >
+            {cta}
+          </a>
+        </div>
+      </div>
+    </section>
     {/* End Banner */}
     {/* content section */}
     <section className="relative bg-gradient-to-br from-[#fdf9f5] via-[#fefaf6] to-[#f8f4ed] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden">
