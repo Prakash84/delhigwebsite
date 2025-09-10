@@ -589,7 +589,7 @@ export default function Home({
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-500 group">
               <div className="relative h-96">
                 <Image 
-                  src="/images/6631.jpg" 
+                  src="/images/modelg.jpg" 
                   alt="Relaxing Spa Massage"
                   layout="fill"
                   objectFit="cover"
@@ -1130,7 +1130,7 @@ View All Cities
           className="relative"
         >
           <Image
-            src="/images/31106.jpg"
+            src="/images/172420-8871.jpg"
             alt="Sensual Spa Experience"
             width={520}
             height={550}
