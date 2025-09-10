@@ -70,6 +70,7 @@ export default function Home({
       role: 'Corporate Executive',
       category: 'highprofile',
       description: 'Fortune 500 company board member. MBA from Harvard Business School.',
+      image: '/images/49.jpg',
     },
     {
       id: 6,
@@ -77,6 +78,7 @@ export default function Home({
       role: 'First Class Hostess',
       category: 'airhostess',
       description: 'Specialized in luxury travel experience. Trained in hospitality management.',
+      image: '/images/smiling.jpg', // Placeholder image path
     },
     {
       id: 7,
@@ -84,6 +86,7 @@ export default function Home({
       role: 'Film Actress',
       category: 'celebrity',
       description: 'Rising star in independent cinema. Trained at Royal Academy of Dramatic Art.',
+      image: '/images/413965.jpg', // Placeholder image path
     },
     {
       id: 8,
@@ -91,6 +94,7 @@ export default function Home({
       role: 'Engineering Student',
       category: 'college',
       description: 'Robotics club president. Developing AI solutions for sustainable energy.',
+      image: '/images/1.jpg', // Placeholder image path
     },
   ];
   const filteredStaff = activeCategory === 'all' 

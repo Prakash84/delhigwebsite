@@ -20,67 +20,71 @@ export default function Pricing() {
         { id: 'highprofile', name: 'High Profile' },
       ];
       const staffMembers = [
-        {
-          id: 1,
-          name: 'Sophia Martinez',
-          role: 'Senior Airhostess',
-          category: 'airhostess',
-          description: '5+ years experience with international airlines. Fluent in 4 languages.',
-          image: '/images/Airhostess_girl.jpg', // Placeholder image path
-        },
-        {
-          id: 2,
-          name: 'Alex Johnson',
-          role: 'TV Personality',
-          category: 'celebrity',
-          description: 'Award-winning host of "Nightlife" show. Known for vibrant personality.',
-          image: '/images/Celebrity_girl.jpg', // Placeholder image pathss
-        },
-        {
-          id: 3,
-          name: 'Emma Wilson',
-          role: 'Marketing Student',
-          category: 'college',
-          description: 'Top of her class at NYU. Passionate about digital marketing trends.',
-          image: '/images/spaStaffInsta.jpg', // Placeholder image path
-        },
-        {
-          id: 4,
-          name: 'Isabella Rossi',
-          role: 'International Model',
-          category: 'foreign',
-          description: 'Milan-born fashion model. Featured in Vogue and Elle magazines.',
-          image: '/images/celebrityspastaff.jpg', // Placeholder image path
-        },
-        {
-          id: 5,
-          name: 'Olivia Chen',
-          role: 'Corporate Executive',
-          category: 'highprofile',
-          description: 'Fortune 500 company board member. MBA from Harvard Business School.',
-        },
-        {
-          id: 6,
-          name: 'Mia Thompson',
-          role: 'First Class Hostess',
-          category: 'airhostess',
-          description: 'Specialized in luxury travel experience. Trained in hospitality management.',
-        },
-        {
-          id: 7,
-          name: 'Chloe Williams',
-          role: 'Film Actress',
-          category: 'celebrity',
-          description: 'Rising star in independent cinema. Trained at Royal Academy of Dramatic Art.',
-        },
-        {
-          id: 8,
-          name: 'Ava Garcia',
-          role: 'Engineering Student',
-          category: 'college',
-          description: 'Robotics club president. Developing AI solutions for sustainable energy.',
-        },
-      ];
+    {
+      id: 1,
+      name: 'Sophia Martinez',
+      role: 'Senior Airhostess',
+      category: 'airhostess',
+      description: '5+ years experience with international airlines. Fluent in 4 languages.',
+      image: '/images/Airhostess_girl.jpg', // Placeholder image path
+    },
+    {
+      id: 2,
+      name: 'Alex Johnson',
+      role: 'TV Personality',
+      category: 'celebrity',
+      description: 'Award-winning host of "Nightlife" show. Known for vibrant personality.',
+      image: '/images/Celebrity_girl.jpg', // Placeholder image pathss
+    },
+    {
+      id: 3,
+      name: 'Emma Wilson',
+      role: 'Marketing Student',
+      category: 'college',
+      description: 'Top of her class at NYU. Passionate about digital marketing trends.',
+      image: '/images/spaStaffInsta.jpg', // Placeholder image path
+    },
+    {
+      id: 4,
+      name: 'Isabella Rossi',
+      role: 'International Model',
+      category: 'foreign',
+      description: 'Milan-born fashion model. Featured in Vogue and Elle magazines.',
+      image: '/images/celebrityspastaff.jpg', // Placeholder image path
+    },
+    {
+      id: 5,
+      name: 'Olivia Chen',
+      role: 'Corporate Executive',
+      category: 'highprofile',
+      description: 'Fortune 500 company board member. MBA from Harvard Business School.',
+      image: '/images/49.jpg',
+    },
+    {
+      id: 6,
+      name: 'Mia Thompson',
+      role: 'First Class Hostess',
+      category: 'airhostess',
+      description: 'Specialized in luxury travel experience. Trained in hospitality management.',
+      image: '/images/smiling.jpg', // Placeholder image path
+    },
+    {
+      id: 7,
+      name: 'Chloe Williams',
+      role: 'Film Actress',
+      category: 'celebrity',
+      description: 'Rising star in independent cinema. Trained at Royal Academy of Dramatic Art.',
+      image: '/images/413965.jpg', // Placeholder image path
+    },
+    {
+      id: 8,
+      name: 'Ava Garcia',
+      role: 'Engineering Student',
+      category: 'college',
+      description: 'Robotics club president. Developing AI solutions for sustainable energy.',
+      image: '/images/1.jpg', // Placeholder image path
+    },
+  ];
       const filteredStaff = activeCategory === 'all' 
         ? staffMembers 
         : staffMembers.filter(member => member.category === activeCategory);
