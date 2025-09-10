@@ -564,7 +564,7 @@ export default function Home({
     </section>
     {/* End Banner */}
     {/* content section */}
-    <section className="relative bg-gradient-to-br from-[#fdf9f5] via-[#fefaf6] to-[#f8f4ed] py-20 px-4 sm:px-8 lg:px-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#fdf9f5] via-[#fefaf6] to-[#f8f4ed] py-5 px-4 sm:px-8 lg:px-16 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-10 left-0 w-28 h-28 rounded-full bg-pink-200/30 blur-2xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-purple-200/30 blur-2xl"></div>
