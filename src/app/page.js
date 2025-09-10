@@ -10,11 +10,12 @@ import { Sparkles, Camera, MapPin } from "lucide-react";
 
 
 export default function Home({
-imageUrl = '/images/6631.jpg', // replace with your stock image path or external URL
-title = 'Luxury Companion Services',
-subtitle = 'Experience elegance, discretion & premium companionship',
-cta = 'Book Now',
-ctaHref = '#',
+  images = ['/images/7168.jpg'], // keep single image or pass swiper images externally
+  imageUrl = '/images/7168.jpg',
+  title = 'Luxury Companion Services',
+  subtitle = 'Experience elegance, discretion & premium companionship',
+  cta = 'Book Now',
+  ctaHref = '#',
 }) {
   const [isVisible, setIsVisible] = useState(false);
    useEffect(() => {
@@ -423,92 +424,112 @@ ctaHref = '#',
     {/* Banner */}
     <section className="relative w-full">
       {/* Background image with dark gradient overlay */}
-     <div className="relative min-h-screen w-full overflow-hidden rounded-2xl shadow-2xl">
+      <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl">
+        {/* Responsive height: mobile 60vh, md 80vh, lg 90vh */}
+        <div className="relative h-[60vh] md:h-[80vh] lg:h-[90vh] w-full">
+          <Image
+            src={imageUrl}
+            alt="Luxury model"
+            fill
+            priority
+            className="object-cover object-center"
+          />
 
-        <Image
-          src={imageUrl}
-          alt="Luxury model"
-          fill
-          priority
-          className="object-cover object-center filter brightness-90"
-        />
+          {/* Gradient overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
 
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          {/* Content container */}
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4 sm:px-6 md:px-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                {/* Left side - text */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-white max-w-2xl py-8 md:py-12"
+                >
+                  <p className="inline-block px-3 py-1 rounded-full bg-white/10 text-xs sm:text-sm mb-3">Premium • Discreet • Verified</p>
 
-        {/* Content container */}
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              {/* Left side - text */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7 }}
-                className="text-white max-w-2xl"
+                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mt-2">
+                    {title}
+                  </h1>
+
+                  <p className="mt-3 text-sm sm:text-base md:text-lg text-white/90 max-w-prose">{subtitle}</p>
+
+                  <div className="mt-6 flex items-center gap-3 flex-wrap">
+                    <a
+                      href={ctaHref}
+                      className="inline-flex items-center justify-center rounded-full px-5 py-2.5 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold shadow-lg transform transition hover:scale-105 text-sm sm:text-base"
+                      aria-label="Book now"
+                    >
+                      {cta}
+                    </a>
+
+                    <a
+                      href="#services"
+                      className="text-sm text-white/90 underline underline-offset-4"
+                    >
+                      View Services
+                    </a>
+                  </div>
+
+                  {/* small trust badges */}
+                  <div className="mt-5 flex gap-3 items-center text-xs sm:text-sm text-white/80">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-green-400 inline-block" />
+                      <span>Verified Profiles</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block" />
+                      <span>24/7 Support</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Right side - subtle framed card (visible on md+) */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.12 }}
+                  className="hidden md:flex justify-end"
+                >
+                  <div className="w-[320px] rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 shadow-xl">
+                    <div className="relative h-[440px] w-full">
+                      <Image
+                        src={imageUrl}
+                        alt="Model cropped"
+                        fill
+                        className="object-cover object-center"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile sticky mini CTA (center bottom) */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-5 md:hidden">
+            <div className="flex items-center justify-between gap-4 bg-white/95 rounded-full px-4 py-3 shadow-sm backdrop-blur-sm max-w-[92vw]">
+              <div className="truncate">
+                <p className="text-sm font-semibold truncate">{title}</p>
+                <p className="text-xs text-gray-600 truncate">{subtitle}</p>
+              </div>
+              <a
+                href={ctaHref}
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white font-medium text-sm"
               >
-                <p className="inline-block px-3 py-1 rounded-full bg-white/10 text-sm mb-4">Premium • Discreet • Verified</p>
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mt-2">
-                  {title}
-                </h1>
-                <p className="mt-4 text-lg md:text-xl text-white/90">{subtitle}</p>
-
-                <div className="mt-8 flex items-center gap-4">
-                  <a
-                    href={ctaHref}
-                    className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold shadow-lg transform transition hover:scale-105"
-                    aria-label="Book now"
-                  >
-                    {cta}
-                  </a>
-
-                  <a
-                    href="#services"
-                    className="text-sm text-white/90 underline underline-offset-4"
-                  >
-                    View Services
-                  </a>
-                </div>
-
-                {/* small trust badges */}
-                <div className="mt-6 flex gap-3 items-center text-sm text-white/80">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-green-400 inline-block" />
-                    <span>Verified Profiles</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-yellow-400 inline-block" />
-                    <span>24/7 Support</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Right side - subtle framed card (visible on md+) */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.15 }}
-                className="hidden md:flex justify-end"
-              >
-                <div className="w-[360px] rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 shadow-xl">
-                  <div className="relative h-[480px] w-full">
-                    <Image
-                      src={imageUrl}
-                      alt="Model cropped"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                </div>
-              </motion.div>
+                {cta}
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Small responsive strip CTA for mobile */}
-      <div className="mt-4 md:mt-6 container mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between gap-4 bg-white rounded-full px-4 py-3 shadow-sm md:hidden">
+      {/* Small responsive strip CTA for tablet+ (optional) */}
+      <div className="mt-4 md:mt-6 container mx-auto px-4 sm:px-6 md:px-12 hidden md:block">
+        <div className="flex items-center justify-between gap-4 bg-white rounded-full px-4 py-3 shadow-sm">
           <div>
             <p className="text-sm font-semibold">{title}</p>
             <p className="text-xs text-gray-600">{subtitle}</p>
