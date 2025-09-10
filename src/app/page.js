@@ -672,6 +672,125 @@ export default function Home() {
       </div>
     </section>
     {/* Content */}
+    {/* staff showcase */}
+ <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            Our Exceptional Team
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Meet our diverse team of professionals who bring excellence and passion to every engagement.
+          </p>
+        </motion.div>
+
+        {/* Category Filters */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-3 mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeCategory === category.id
+                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Staff Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {filteredStaff.map((staff) => (
+            <motion.div
+              key={staff.id}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              whileHover={{ y: -10 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
+            >
+              <div className="relative h-72 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                <div className="absolute inset-0 flex items-end p-6 z-20">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{staff.name}</h3>
+                    <p className="text-pink-300 font-medium">{staff.role}</p>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-gray-800 z-20">
+                  {categories.find(cat => cat.id === staff.category)?.name}
+                </div>
+                
+                {/* Placeholder for image */}
+                <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-full flex items-center justify-center">
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                  <Image
+                        src={staff.image} // Make sure `staff.image` has full image URL or path
+                        alt={staff.name}
+                        fill
+                        className="object-cover"
+                      />
+                   </div>
+              </div>
+              
+              <div className="p-5">
+                <p className="text-gray-600 mb-4">{staff.description}</p>
+                
+                <div className="flex space-x-3">
+                  <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                    View Profile
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <motion.div 
+          className="mt-20 bg-gradient-to-r from-purple-700 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center">Why Our Team Stands Out</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { value: '200+', label: 'Professionals' },
+                { value: '98%', label: 'Client Satisfaction' },
+                { value: '50+', label: 'Countries Represented' },
+                { value: '24/7', label: 'Availability' }
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
+                  <div className="text-pink-200">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+    {/* End Staff Showcase */}
     {/* About Section */}
                         <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] relative overflow-hidden">
           {/* Decorative Elements */}
@@ -1121,125 +1240,7 @@ export default function Home() {
     </section>
 
     {/* end content section */}
-    {/* staff showcase */}
- <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Our Exceptional Team
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Meet our diverse team of professionals who bring excellence and passion to every engagement.
-          </p>
-        </motion.div>
-
-        {/* Category Filters */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Staff Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filteredStaff.map((staff) => (
-            <motion.div
-              key={staff.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
-            >
-              <div className="relative h-72 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
-                <div className="absolute inset-0 flex items-end p-6 z-20">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{staff.name}</h3>
-                    <p className="text-pink-300 font-medium">{staff.role}</p>
-                  </div>
-                </div>
-                <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-gray-800 z-20">
-                  {categories.find(cat => cat.id === staff.category)?.name}
-                </div>
-                
-                {/* Placeholder for image */}
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-full flex items-center justify-center">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
-                  <Image
-                        src={staff.image} // Make sure `staff.image` has full image URL or path
-                        alt={staff.name}
-                        fill
-                        className="object-cover"
-                      />
-                   </div>
-              </div>
-              
-              <div className="p-5">
-                <p className="text-gray-600 mb-4">{staff.description}</p>
-                
-                <div className="flex space-x-3">
-                  <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
-                    View Profile
-                  </button>
-                  <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <motion.div 
-          className="mt-20 bg-gradient-to-r from-purple-700 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">Why Our Team Stands Out</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { value: '200+', label: 'Professionals' },
-                { value: '98%', label: 'Client Satisfaction' },
-                { value: '50+', label: 'Countries Represented' },
-                { value: '24/7', label: 'Availability' }
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-pink-200">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-    {/* End Staff Showcase */}
+    
     
     {/* pricing */}
      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
