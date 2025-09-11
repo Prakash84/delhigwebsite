@@ -12,7 +12,12 @@ import {  Star, MapPin, Sparkles, Hotel, Building2 } from 'lucide-react';
 
 
 
-export default function Locations() {
+export default function Locations({
+  title = 'Are you looking for\nPremium Properties?',
+  subtitle = 'View and book your appointment with our partners',
+  cta = 'View Properties',
+  images = ['/images/27110283.jpg', '/images/6637.jpg'],
+}) {
    // 5 start hotel 
       const [activeHotel, setActiveHotel] = useState(null);
     
@@ -247,6 +252,7 @@ const cities = [
 
   return (
     <>
+    
     {/* banner */}
                <section className="relative bg-gradient-to-r from-amber-50 to-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -259,10 +265,14 @@ const cities = [
           className="space-y-6"
         >
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center">
-              <span className="text-amber-800 text-lg font-bold">✦</span>
+            <div className="w-11 h-11 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center shadow-md">
+              <span className="text-white text-lg font-bold">✦</span>
             </div>
-            <p className="text-lg font-medium text-amber-900">OUR OUTLETS</p>
+
+            {/* Label matches Our Premium gradient */}
+            <p className="text-sm font-medium uppercase bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              OUR OUTLETS
+            </p>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold font-serif leading-tight">
@@ -285,14 +295,15 @@ const cities = [
           <div className="flex items-center gap-4">
             <a
               href="tel:+00123456789"
-              className="flex items-center gap-2 text-amber-800 hover:text-amber-600 transition"
+              className="flex items-center gap-2 font-medium bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition"
             >
               📞 +00 123 456 789
             </a>
 
+            {/* Book Now uses matching gradient background */}
             <a
               href="#book"
-              className="px-6 py-3 rounded-xl bg-amber-600 text-white font-medium shadow-md hover:bg-amber-700 transition"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-medium shadow-lg hover:scale-[1.02] transition-transform"
             >
               Book Now
             </a>
@@ -327,7 +338,148 @@ const cities = [
       </div>
     </section>
             {/* end banner */}
-           
+            {/* Content Hero Section */}
+              <section className="bg-gray-50 py-24">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    
+    {/* Left: Text */}
+    <div className="order-2 lg:order-1 text-center lg:text-left">
+      <motion.h2
+                    className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-800 leading-tight mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    Experience the{" "}
+                    <span className="relative">
+                      <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                        Art of Relaxation
+                      </span>
+                      <span className="absolute bottom-2 left-0 w-full h-3 bg-purple-200/60 z-0"></span>
+                    </span>
+                  </motion.h2>
+        
+                  <motion.div
+                    className="space-y-6 mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      Welcome to{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        Delhi Body Spa
+                      </strong>
+                      , where we offer a range of{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        luxury spa
+                      </strong>{" "}
+                      treatments including{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        female to male spa
+                      </strong>
+                      ,{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        couple massages
+                      </strong>
+                      , and much more. Escape the hustle of Delhi and immerse yourself
+                      in rejuvenating treatments tailored to your needs.
+                    </p>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      Welcome to{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        Delhi Body Spa
+                      </strong>
+                      , where we offer a range of{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        luxury spa
+                      </strong>{" "}
+                      treatments including{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        female to male spa
+                      </strong>
+                      ,{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        couple massages
+                      </strong>
+                      , and much more. Escape the hustle of Delhi and immerse yourself
+                      in rejuvenating treatments tailored to your needs.
+                    </p>
+                  </motion.div>
+      {/* <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+        {title.split('\n').map((line, i) => (
+          <span key={i} className={i === 1 ? 'block mt-2' : 'block'}>{line}</span>
+        ))}
+      </h2> */}
+
+      {/* <p className="mt-6 text-gray-600 max-w-xl mx-auto lg:mx-0 text-lg">
+        {subtitle}
+      </p> */}
+
+      <div className="mt-10 flex justify-center lg:justify-start">
+        <a
+          href="#"
+          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium shadow-lg hover:shadow-xl transition-shadow duration-200"
+        >
+          {cta}
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    {/* Right: Polaroid-ish images */}
+    <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+      <div className="w-full max-w-lg lg:max-w-2xl relative">
+        {/* Top image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20, rotate: -6 }}
+          animate={{ opacity: 1, y: 0, rotate: -6 }}
+          transition={{ duration: 0.6 }}
+          className="absolute right-0 -top-12 w-80 sm:w-96 lg:w-[30rem] shadow-2xl rounded-xl bg-white p-2"
+          style={{ transformOrigin: 'right center' }}
+        >
+          <div className="rounded-md overflow-hidden border-1 border-white">
+            <Image
+              src={images[0]}
+              alt="property 1"
+              width={900}
+              height={600}
+              className="object-cover w-full h-64 sm:h-72 lg:h-[22rem]"
+            />
+          </div>
+        </motion.div>
+
+        {/* Bottom image */}
+        <motion.div
+          initial={{ opacity: 0, y: 40, rotate: 6 }}
+          animate={{ opacity: 1, y: 0, rotate: 6 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="relative mt-52 w-80 sm:w-96 lg:w-[30rem] shadow-2xl rounded-xl bg-white p-2 mx-auto"
+          style={{ transformOrigin: 'left center' }}
+        >
+          <div className="rounded-md overflow-hidden border-1 border-white">
+            <Image
+              src={images[1]}
+              alt="property 2"
+              width={900}
+              height={600}
+              className="object-cover w-full h-64 sm:h-72 lg:h-[22rem]"
+            />
+          </div>
+        </motion.div>
+
+        {/* Decorative subtle background circle */}
+        <div className="hidden lg:block absolute -left-28 top-28 w-56 h-56 bg-white rounded-full opacity-30 filter blur-xl"></div>
+      </div>
+    </div>
+  </div>
+              </section>
+              {/* End Content Hero Section */}
+
             {/* Location */}
                 <section className="py-12 bg-gray-50">
             <div className="max-w-7xl mx-auto px-6">
