@@ -230,153 +230,170 @@ export default function Locations() {
     icon: <MapPin className="w-6 h-6 text-purple-600" /> // Green
   },
 ];
+const cities = [
+{ name: 'DELHI', img: '/images/hotel3.webp' },
+{ name: 'MUMBAI', img: '/images/lajpatnagahotel.avif' },
+{ name: 'NOIDA', img: '/images/RoseateHouse.jpg' },
+{ name: 'BANGALORE', img: '/images/paschimvihar.jpg' },
+{ name: 'PUNE', img: '/images/JwMarriott_CP.jpg' },
+{ name: 'AHMEDABAD', img: '/images/Andazhat.jpg' },
+{ name: 'GURGAON', img: '/images/holidayIn_CP.jpg' },
+{ name: 'HYDERABAD', img: '/images/tajmahalhotel_lajpatnagar.jpg' },
+{ name: 'KOLKATA', img: '/images/paschimvihar.jpg' },
+{ name: 'CHENNAI', img: '/images/hotel2.jpg' },
+{ name: 'CHANDIGARH', img: '/images/pullmanAerocity.jpg' },
+{ name: 'JAIPUR', img: '/images/jwmarriott.jpeg' },
+]
 
   return (
     <>
     {/* banner */}
-               <div className="relative bg-white py-16 px-6 md:px-12 rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-64 h-64 bg-pink-300 rounded-full -translate-x-32 -translate-y-32"></div>
-                <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-300 rounded-full translate-x-40 translate-y-40"></div>
-              </div>
+               <section className="relative bg-gradient-to-r from-amber-50 to-white py-16">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         
-              {/* Main content grid */}
-              <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Text content */}
-                <div className="space-y-8">
-                  <div className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 px-6 rounded-full text-sm font-semibold shadow-md">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
-                    </svg>
-                    Special Launch Offer - 20% Off First Month!
-                  </div>
-        
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-                    Pricing That <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">Grows With You</span>
-                  </h1>
-                  
-                  <p className="text-lg text-gray-600">
-                    Choose the perfect plan for your journey. No hidden fees, no complicated terms. Everything you need to succeed in one place.
-                  </p>
-                  
-                  {/* Feature highlights */}
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mr-4">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">No credit card required to start</span>
-                    </div>
-                    
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-4">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Free 14-day trial on all plans</span>
-                    </div>
-                    
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mr-4">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">Cancel anytime with no questions asked</span>
-                    </div>
-                  </div>
-                  
-                  {/* CTA Button */}
-                  <button className="group mt-8 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-semibold py-4 px-10 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center">
-                    Explore Our Plans
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </button>
-                </div>
-                
-                {/* Image collage */}
-                <div className="relative">
-                  <div className="grid grid-cols-2 gap-4">
-                    {/* Main image */}
-                    <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
-                      <Image
-                        src="/images/spaStaffInsta.jpg"
-                        alt="Happy customer"
-                        layout="fill"
-                        objectFit="cover"
-                        className="transition-transform duration-700 hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <p className="font-semibold">Emma, Premium Plan</p>
-                        <p className="text-sm">&quot;Best decision I&apos;ve made!&quot;</p>
-                      </div>
-                    </div>
-                    
-                    {/* Secondary images */}
-                    <div className="space-y-4">
-                      {/* <div className="relative h-36 rounded-2xl overflow-hidden shadow-md">
-                        <Image
-                          src="/images/"
-                          alt="Feature preview"
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-700 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-transparent"></div>
-                        <div className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md">
-                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
-                          </svg>
-                        </div>
-                      </div> */}
-                      
-                      <div className="relative h-80 rounded-2xl overflow-hidden shadow-md">
-                        <Image
-                          src="/images/1.jpg"
-                          alt="Community image"
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-700 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-b from-pink-600/20 to-transparent"></div>
-                        <div className="absolute bottom-2 left-2 flex -space-x-2">
-                          <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-500"></div>
-                          <div className="w-8 h-8 rounded-full border-2 border-white bg-purple-500"></div>
-                          <div className="w-8 h-8 rounded-full border-2 border-white bg-pink-400"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating elements */}
-                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
-                    <div className="text-center">
-                      <div className="font-bold text-2xl text-pink-600">4.9</div>
-                      <div className="flex justify-center">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+        {/* Left Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="space-y-6"
+        >
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center">
+              <span className="text-amber-800 text-lg font-bold">✦</span>
             </div>
+            <p className="text-lg font-medium text-amber-900">OUR OUTLETS</p>
+          </div>
+
+          <h1 className="text-5xl md:text-6xl font-bold font-serif leading-tight">
+  <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+    Our Premium
+  </span>{' '}
+  <span className="text-amber-500">Wellness</span>
+  <br />
+  <span className="bg-black text-white px-3 py-1 rounded-md inline-block mt-2">
+    Spa Outlets
+  </span>
+</h1>
+
+          <p className="text-gray-600 max-w-md">
+            Relax your body and mind with our premium spa and wellness care. 
+            Experience tranquility, beauty, and complete rejuvenation in one place.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-4">
+            <a
+              href="tel:+00123456789"
+              className="flex items-center gap-2 text-amber-800 hover:text-amber-600 transition"
+            >
+              📞 +00 123 456 789
+            </a>
+
+            <a
+              href="#book"
+              className="px-6 py-3 rounded-xl bg-amber-600 text-white font-medium shadow-md hover:bg-amber-700 transition"
+            >
+              Book Now
+            </a>
+          </div>
+
+          <a
+            href="https://www.website.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-500 hover:text-amber-600"
+          >
+            🌐 www.website.com
+          </a>
+        </motion.div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative"
+        >
+          <Image
+            src="/images/RoseateHouse.jpg" // apni image path yaha dena
+            alt="Spa & Beauty"
+            width={700}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover"
+          />
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/10 to-transparent"></div>
+        </motion.div>
+      </div>
+    </section>
             {/* end banner */}
+           
+            {/* Location */}
+                <section className="py-12 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="text-center mb-16"
+                    >
+                      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                        Our Premium Location
+                      </h2>
+                      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Meet our diverse team of professionals who bring excellence and passion to every engagement.
+                      </p>
+                    </motion.div>
+            
+            
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            {cities.map((c, i) => (
+            <motion.a
+            key={c.name}
+            href={`#/cities/${c.name.toLowerCase()}`}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.04, duration: 0.35 }}
+            className="group block rounded-2xl overflow-hidden shadow-lg relative transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 bg-white"
+            >
+            <div className="relative w-full h-44 sm:h-48 lg:h-52">
+            <Image
+            src={c.img}
+            alt={c.name}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+            style={{ objectFit: 'cover' }}
+            className="group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
+            </div>
+            
+            
+            <div className="absolute left-0 right-0 bottom-4 px-4 text-center">
+            <span className="text-white text-lg sm:text-xl font-semibold tracking-wider drop-shadow-lg uppercase">{c.name}</span>
+            </div>
+            </motion.a>
+            ))}
+            </div>
+            
+            
+            <div className="flex justify-center mt-10">
+            <a
+            href="#/cities"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition-all"
+            >
+            View All Cities
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            </a>
+            </div>
+            </div>
+            </section>
+            
+                {/* End Location */}
+           
             {/* iCON LOCATION */}
 <section className="py-24 bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
