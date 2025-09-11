@@ -580,7 +580,7 @@ const profiles = [
       </div>
     </section>
     {/* End Banner */}
-    
+        
     {/* Content Hero Section */}
                   <section className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
