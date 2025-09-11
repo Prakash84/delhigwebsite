@@ -12,12 +12,8 @@ import {  Star, MapPin, Sparkles, Hotel, Building2 } from 'lucide-react';
 
 
 
-export default function Locations({
-  title = 'Are you looking for\nPremium Properties?',
-  subtitle = 'View and book your appointment with our partners',
-  cta = 'View Properties',
-  images = ['/images/27110283.jpg', '/images/6637.jpg'],
-}) {
+export default function Locations() {
+  
    // 5 start hotel 
       const [activeHotel, setActiveHotel] = useState(null);
     
@@ -249,7 +245,15 @@ const cities = [
 { name: 'CHANDIGARH', img: '/images/pullmanAerocity.jpg' },
 { name: 'JAIPUR', img: '/images/jwmarriott.jpeg' },
 ]
-
+const profiles = [
+  { image: '/images/modelg.jpg' },
+  { image: '/images/18244.jpg' },
+  { image: '/images/172420-8871.jpg' },
+  { image: '/images/4201724.jpg' },
+  { image: '/images/7168.jpg' },
+  { image: '/images/49.jpg' },
+  { image: '/images/2291.jpg' },
+]
   return (
     <>
     
@@ -338,6 +342,176 @@ const cities = [
       </div>
     </section>
             {/* end banner */}
+                <section className="bg-gradient-to-b from-amber-50 to-white py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Text */}
+          <div className="text-center lg:text-left">
+            <motion.h2
+                    className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-800 leading-tight mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    Experience the{" "}
+                    <span className="relative">
+                      <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                        Premium Company & Curated Moments
+                      </span>
+                      <span className="absolute bottom-2 left-0 w-full h-3 bg-purple-200/60 z-0"></span>
+                    </span>
+                  </motion.h2>
+        
+                  <motion.div
+                    className="space-y-6 mb-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                         
+                      Trusted,{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                        discreet and professional
+                      </strong>
+                      , companionship for events,{" "}
+                      <strong className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 font-medium">
+                       travel,
+                      </strong>{" "}
+                      and curated experiences across Delhi.{" "}
+                      
+                    </p>
+                    
+                  </motion.div>
+           
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium shadow-lg hover:bg-emerald-600 transition"
+              >
+                Book a Consultation
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+
+              <a
+                href="#services"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 bg-white text-gray-800 text-sm font-medium shadow-sm hover:shadow-md transition"
+              >
+                View Services
+              </a>
+            </div>
+
+            {/* Feature list */}
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg lg:max-w-none mx-auto lg:mx-0">
+              <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+                <div className="mb-2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600">
+                  {/* icon */}
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-semibold">Verified Profiles</h4>
+                <p className="mt-1 text-xs text-gray-500">Identity & background-checked</p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+                <div className="mb-2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v4a1 1 0 001 1h3m10 0h3a1 1 0 001-1V7M5 7V5a2 2 0 012-2h10a2 2 0 012 2v2" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-semibold">Discreet Booking</h4>
+                <p className="mt-1 text-xs text-gray-500">Secure & private handling</p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-4 shadow-sm text-center">
+                <div className="mb-2 inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 1.343-3 3v1h6v-1c0-1.657-1.343-3-3-3z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14v6" />
+                  </svg>
+                </div>
+                <h4 className="text-sm font-semibold">Personal Concierge</h4>
+                <p className="mt-1 text-xs text-gray-500">Tailored experiences & planning</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Profiles / Gallery */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white p-4">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-700">Featured Companions</h3>
+                  <p className="text-xs text-gray-500">Curated for quality & style</p>
+                </div>
+                <div className="text-xs text-gray-400">Delhi</div>
+              </div>
+
+              {/* Carousel-like simple row (replace with real carousel if you want) */}
+              <div className="flex gap-3 overflow-x-auto pb-2 -mx-2 px-2">
+  {profiles.map((p, idx) => (
+    <motion.div
+      key={idx}
+      whileHover={{ scale: 1.03 }}
+      className="min-w-[160px] bg-gray-50 rounded-2xl p-3 shadow-sm"
+    >
+      <div className="w-full h-50 rounded-lg overflow-hidden bg-gray-200">
+        {/* use p.image not p (object) */}
+        <Image
+          src={p.image}
+          alt={`profile-${idx}`}
+          width={400}
+          height={300}
+          className="object-cover w-full h-full"
+        />
+      </div>
+
+      <div className="mt-3">
+        <div className="font-medium text-sm">Ari • 26</div>
+        <div className="text-xs text-gray-500">Events • Travel • Dining</div>
+      </div>
+
+      <div className="mt-3">
+        <a href="#contact" className="inline-block w-full text-center text-sm py-2 rounded-md bg-gradient-to-r from-purple-600 to-pink-600 text-white">Request</a>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
+              <div className="mt-4 text-xs text-gray-500">
+                All profiles are verified and available for lawful, non-sexual companionship & event services only.
+              </div>
+            </div>
+
+            {/* Decorative badge */}
+            <div className="absolute -left-6 -top-6 hidden md:flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md border">
+              <svg className="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0 2-4 3-4 5v1h8v-1c0-2-4-3-4-5z" />
+              </svg>
+              <div className="text-sm font-medium">Trusted & Verified</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Small CTA strip */}
+        <div className="mt-12 bg-white rounded-2xl p-6 shadow-inner border border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div className="text-sm font-semibold text-gray-800">Need something special?</div>
+            <div className="text-xs text-gray-500">Custom experiences for birthdays, corporate events, travel & more.</div>
+          </div>
+          <div className="flex gap-3">
+            <a href="#contact" className="px-5 py-2 rounded-full bg-emerald-500 text-white text-sm">Enquire Now</a>
+            <a href="#faq" className="px-5 py-2 rounded-full border border-gray-200 text-sm">Read FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
             {/* Content Hero Section */}
               <section className="bg-gray-50 py-24">
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -423,7 +597,7 @@ const cities = [
           href="#"
           className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium shadow-lg hover:shadow-xl transition-shadow duration-200"
         >
-          {cta}
+          View Properties
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -444,7 +618,7 @@ const cities = [
         >
           <div className="rounded-md overflow-hidden border-1 border-white">
             <Image
-              src={images[0]}
+              src='/images/27110283.jpg'
               alt="property 1"
               width={900}
               height={600}
@@ -463,7 +637,7 @@ const cities = [
         >
           <div className="rounded-md overflow-hidden border-1 border-white">
             <Image
-              src={images[1]}
+              src='/images/6637.jpg'
               alt="property 2"
               width={900}
               height={600}
