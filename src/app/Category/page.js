@@ -300,114 +300,118 @@ export default function Category() {
       </div>
     </div>
         {/* end banner */}
-        <section className="bg-gradient-to-r from-amber-50 to-white py-20 lg:py-28">
-              <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        
-                {/* Text column */}
-                <div className="lg:col-span-6">
-                  <motion.h2
-                    initial={{ opacity: 0, y: -10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
-                  >
-                    <span className="block">Experience the</span>
-                    <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Art of</span>
-                    <span className="block text-pink-600">Relaxation</span>
-                  </motion.h2>
-        
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.15, duration: 0.6 }}
-                    className="mt-6 text-gray-600 max-w-xl leading-relaxed"
-                  >
-                  Welcome to Delhi Body Spa, where we offer a range of luxury spa treatments tailored to your needs.Calm interiors, soothing ambiance and privacy.Calm interiors, soothing ambiance and privacy. Calm interiors, soothing ambiance and privacy.
-                  </motion.p>
-        
-                  <div className="mt-8 flex items-center gap-4">
-                    <motion.a
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                      href="#book"
-                      className="inline-flex items-center gap-3 px-6 py-3 rounded-full font-medium shadow-2xl bg-gradient-to-r from-purple-600 to-pink-500 text-white"
-                    >
-                      Book A Session
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                    </motion.a>
-        
-                    <motion.button
-                      whileHover={{ scale: 1.03 }}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 bg-white"
-                    >
-                      View Properties
-                    </motion.button>
-                  </div>
-        
-                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
-                    <div className="flex items-start gap-3">
-                      <div className="w-3 h-3 rounded-full bg-purple-500 mt-2"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-800">Expert Therapists</h4>
-                        <p className="text-sm text-gray-500">Ancient & modern techniques for your wellness.</p>
-                      </div>
-                    </div>
-        
-                    <div className="flex items-start gap-3">
-                      <div className="w-3 h-3 rounded-full bg-pink-500 mt-2"></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-800">Luxurious Setting</h4>
-                        <p className="text-sm text-gray-500">Calm interiors, soothing ambiance and privacy.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        
-                {/* Image column */}
-                <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-                  <div className="w-full max-w-md lg:max-w-lg relative">
-                    {/* big tilted card */}
-                    <motion.div
-                      initial={{ rotate: 6, scale: 0.98, y: -10, opacity: 0 }}
-                      whileInView={{ rotate: 2, scale: 1, y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                      className="rounded-2xl overflow-hidden shadow-2xl ring-8 ring-white"
-                      style={{ boxShadow: '0 30px 60px rgba(0,0,0,0.12)' }}
-                    >
-                      <div className="relative aspect-[4/3] w-full">
-                        <Image src='/images/mmm.jpg' alt="spa" fill style={{ objectFit: 'cover' }} />
-                      </div>
-                    </motion.div>
-        
-                    {/* small overlapping card */}
-                    <motion.div
-                      initial={{ rotate: -8, x: -24, y: 30, opacity: 0 }}
-                      whileInView={{ rotate: -4, x: -8, y: 8, opacity: 1 }}
-                      transition={{ delay: 0.12, duration: 0.6 }}
-                      className="absolute left-0 bottom-0 transform -translate-x-8 translate-y-6 rounded-2xl overflow-hidden shadow-2xl ring-8 ring-white w-64 lg:w-80"
-                      style={{ boxShadow: '0 20px 40px rgba(0,0,0,0.12)' }}
-                    >
-                      <div className="relative aspect-[16/10] w-full">
-                        <Image src='/images/413965.jpg' alt="spa2" fill style={{ objectFit: 'cover' }} />
-                      </div>
-                    </motion.div>
-        
-                    {/* subtle background highlight */}
-                    <div className="pointer-events-none absolute inset-0 -z-10 flex justify-center items-center">
-                      <div className="w-72 h-72 rounded-full blur-3xl opacity-60 bg-gradient-to-r from-purple-300 to-pink-300"></div>
-                    </div>
-                  </div>
-                </div>
-        
+            <section className="bg-gradient-to-r from-amber-50 to-white py-12 sm:py-16 lg:py-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+        {/* Text column */}
+        <div className="lg:col-span-6">
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
+          >
+            <span className="block">Experience the</span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Art of</span>
+            <span className="block text-pink-600">Relaxation</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15, duration: 0.6 }}
+            className="mt-4 sm:mt-6 text-gray-600 max-w-xl leading-relaxed text-sm sm:text-base"
+          >
+            Welcome to Delhi Body Spa — luxury spa treatments tailored to your needs. Calm interiors, soothing ambiance and complete privacy.
+          </motion.p>
+
+          <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 items-center">
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              href="#book"
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full font-medium shadow-2xl bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm sm:text-base"
+            >
+              Book A Session
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+            </motion.a>
+
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-700 bg-white"
+            >
+              View Properties
+            </motion.button>
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+            <div className="flex items-start gap-3">
+              <div className="w-3 h-3 rounded-full bg-purple-500 mt-2" />
+              <div>
+                <h4 className="font-semibold text-gray-800">Expert Therapists</h4>
+                <p className="text-sm text-gray-500">Ancient & modern techniques for your wellness.</p>
               </div>
-        
-              {/* Decorative footer wave */}
-              <div className="mt-12">
-                <svg viewBox="0 0 1200 80" className="w-full" preserveAspectRatio="none">
-                  <path d="M0,0 C300,100 900,-60 1200,50 L1200,80 L0,80 Z" fill="#fff" opacity="0.8"></path>
-                </svg>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="w-3 h-3 rounded-full bg-pink-500 mt-2" />
+              <div>
+                <h4 className="font-semibold text-gray-800">Luxurious Setting</h4>
+                <p className="text-sm text-gray-500">Calm interiors, soothing ambiance and privacy.</p>
               </div>
-            </section>
+            </div>
+          </div>
+        </div>
+
+        {/* Image column */}
+        <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+          <div className="w-full max-w-md lg:max-w-lg relative">
+            {/* big tilted card */}
+            <motion.div
+              initial={{ rotate: 6, scale: 0.98, y: -10, opacity: 0 }}
+              whileInView={{ rotate: 2, scale: 1, y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-2xl overflow-hidden shadow-2xl ring-8 ring-white"
+              style={{ boxShadow: '0 30px 60px rgba(0,0,0,0.12)' }}
+            >
+              <div className="relative aspect-[4/3] w-full">
+                <Image src='/images/mmm.jpg' alt="spa" fill style={{ objectFit: 'cover' }} />
+              </div>
+            </motion.div>
+
+            {/* small overlapping card - hidden on small screens */}
+            <motion.div
+              initial={{ rotate: -8, x: -24, y: 30, opacity: 0 }}
+              whileInView={{ rotate: -4, x: -8, y: 8, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.12, duration: 0.6 }}
+              className="hidden sm:block absolute left-0 bottom-0 transform -translate-x-8 translate-y-6 rounded-2xl overflow-hidden shadow-2xl ring-8 ring-white w-56 sm:w-64 md:w-72 lg:w-80"
+              style={{ boxShadow: '0 20px 40px rgba(0,0,0,0.12)' }}
+            >
+              <div className="relative aspect-[16/10] w-full">
+                <Image src='/images/413965.jpg' alt="spa2" fill style={{ objectFit: 'cover' }} />
+              </div>
+            </motion.div>
+
+            {/* subtle background highlight - smaller on mobile */}
+            <div className="pointer-events-none absolute inset-0 -z-10 flex justify-center items-center">
+              <div className="w-44 h-44 sm:w-72 sm:h-72 rounded-full blur-3xl opacity-60 bg-gradient-to-r from-purple-300 to-pink-300"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Decorative footer wave */}
+      <div className="mt-8 sm:mt-12">
+        <svg viewBox="0 0 1200 80" className="w-full" preserveAspectRatio="none">
+          <path d="M0,0 C300,100 900,-60 1200,50 L1200,80 L0,80 Z" fill="#fff" opacity="0.8"></path>
+        </svg>
+      </div>
+    </section>
         {/* content section  */}
         <section className="relative py-24 px-4 md:px-8 bg-gradient-to-b from-[#fefaf6] to-[#fdf9f5] overflow-hidden">
           {/* Enhanced Decorative Elements */}
