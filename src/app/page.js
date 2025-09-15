@@ -658,42 +658,7 @@ const locations = [
 </div>
 </div>
 </section>
-{/* //// */}
-<section className="py-16">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Escorts Service For Other Locations
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Meet our diverse team of professionals who bring excellence and passion to every engagement.
-          </p>
-        </motion.div>
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {locations.map((location, i) => (
-            <motion.a
-              key={i}
-              href="#"
-              className="block bg-red-800 text-white font-semibold text-lg py-4 rounded-xl shadow-md hover:bg-red-700 transition duration-300"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              {location}
-            </motion.a>
-          ))}
-        </div>
-      </div>
-    </section>
     {/* Content Hero Section */}
                   <section className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -1952,13 +1917,13 @@ View All Cities
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 z-10"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 z-10"></div> */}
               <div className="relative w-full h-full">
                 <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-full flex items-center justify-center">
                   <div className="relative w-full h-full">
                     <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center">
                       <img 
-                        src="/images/SSWSW.jpg" 
+                        src="/images/30848.jpg" 
                         alt="Delhi Fashion" 
                         className="object-cover w-full h-full rounded-xl"
                       />
@@ -1993,7 +1958,7 @@ View All Cities
                 </p>
                 
                 <p>
-                  Social media has played a crucial role in this evolution. Delhi&apos;s fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities. This digital democratization of style has empowered women across socioeconomic backgrounds to participate in fashion conversations.
+                  Social media has played a crucial role in this evolution. Delhi&apos;s fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways.
                 </p>
               </div>
               
@@ -2460,6 +2425,42 @@ View All Cities
       </div>
     </div> */}
     {/* end 5 star hotel */}
+    {/* //// */}
+<section className="py-16">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            Escorts Service For Other Locations
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Meet our diverse team of professionals who bring excellence and passion to every engagement.
+          </p>
+        </motion.div>
+
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {locations.map((location, i) => (
+            <motion.a
+              key={i}
+              href="#"
+              className="block bg-red-800 text-white font-semibold text-lg py-4 rounded-xl shadow-md hover:bg-red-700 transition duration-300"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {location}
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
 
     {/* FAQ Section */}
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
