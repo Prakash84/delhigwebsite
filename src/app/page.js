@@ -351,27 +351,27 @@ export default function Home({
   const features = [
     {
       id: 1,
-      title: "Style Guides",
+      title: "BOOKING 24*7 OPEN",
       description: "Curated fashion guides for Delhi's diverse occasions and seasons",
-      icon: "👗"
+      icon: "📅"
     },
     {
       id: 2,
-      title: "Beauty Tips",
+      title: "GET DISCOUNT UPTO 50%",
       description: "Localized beauty secrets for Delhi's climate and pollution challenges",
-      icon: "💄"
+      icon: "💸"
     },
     {
       id: 3,
-      title: "Events & Meetups",
+      title: "SAFE SEX SERVICES",
       description: "Exclusive gatherings for Delhi's fashion-forward community",
-      icon: "🎉"
+      icon: "🔒"
     },
     {
       id: 4,
-      title: "Local Spotlights",
+      title: "ONLY FOR 18+ ADULTS",
       description: "Featured designers and boutiques from Delhi's fashion scene",
-      icon: "📍"
+      icon: "🔞"
     }
   ];
 
@@ -1482,7 +1482,7 @@ View All Cities
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Delhi Fashion Revolution
+            HIGH-PROFILE ESCORTS IN DELHI GIRLS WAITING FOR YOU!
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover the vibrant style culture of India&apos;s capital. Empowerment through fashion, beauty, and community.
