@@ -458,7 +458,7 @@ const items = [
 {
 title: 'Adult Companion Only for 18+',
 // subtitle: 'Only for 18+',
-src: '/images/18+.WEBP',
+src: '/images/18+.webp',
 },
 {
 title: 'Anal Sex on Special Deman',
@@ -707,10 +707,10 @@ const locations = [
                         transition={{ delay: 0.3 }}
                         viewport={{ once: true }}
                       >
-                        Experience the{" "}
+                        Delhi Escorts Agency -{" "}
                         <span className="relative">
                           <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                            Art of Relaxation
+                            No Compromise on Quality Escorts Service
                           </span>
                           <span className="absolute bottom-2 left-0 w-full h-3 bg-purple-200/60 z-0"></span>
                         </span>
@@ -849,10 +849,10 @@ const locations = [
                     transition={{ delay: 0.3 }}
                     viewport={{ once: true }}
                   >
-                    Experience the{" "}
+                    Variety of{" "}
                     <span className="relative">
                       <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                        Premium Company & Curated Moments
+                        Escort Services in Delhi for Your
                       </span>
                       <span className="absolute bottom-2 left-0 w-full h-3 bg-purple-200/60 z-0"></span>
                     </span>
@@ -1074,7 +1074,7 @@ const locations = [
                   🌸
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 ml-4 tracking-tight">
-                  Room of Relaxation
+                  Personalized Experiences with Sexy Escort in Delhi
                 </h2>
               </div>
     
@@ -1157,7 +1157,7 @@ const locations = [
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Our Exceptional Team
+            Delhi Escort Service Available Categories
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Meet our diverse team of professionals who bring excellence and passion to every engagement.
@@ -1364,10 +1364,10 @@ View All Cities
                 transition={{ delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Experience the{" "}
+                Selected Call Girls {" "}
                 <span className="relative">
                   <span className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                    Art of Relaxation
+                    Available in Delhi Escort Service Agency
                   </span>
                   <span className="absolute bottom-2 left-0 w-full h-3 bg-purple-200/60 z-0"></span>
                 </span>
@@ -1590,7 +1590,7 @@ View All Cities
           className="space-y-6"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            Awaken Your <span className="text-rose-600">Deepest Desires</span>
+            Maximum Satisfaction <span className="text-rose-600">with 100% Verified Escorts in Delhi</span>
           </h2>
           <p className="text-lg text-gray-700">
             Step into a world of intimacy, warmth, and pleasure. Our luxury spa
@@ -1706,7 +1706,7 @@ View All Cities
           className="space-y-6"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            The <span className="text-pink-600">Delhi Lifestyle</span>
+            Things to Do in <span className="text-pink-600">5 Star Hotel with Sexy Call Girl in Delhi</span>
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             A Delhi Girl is more than just a style icon — she’s the perfect
@@ -1994,18 +1994,6 @@ View All Cities
                 
                 <p>
                   Social media has played a crucial role in this evolution. Delhi&apos;s fashion influencers have created communities that transcend traditional boundaries, showcasing how to style traditional garments in modern ways. Platforms like Instagram have become virtual runways where young Delhiites express their unique fashion sensibilities. This digital democratization of style has empowered women across socioeconomic backgrounds to participate in fashion conversations.
-                </p>
-                
-                <p>
-                  Seasonal fashion in Delhi requires special consideration due to its extreme climate. Summer months demand lightweight fabrics like cotton and linen, while winter calls for luxurious wools and pashminas. The monsoon season presents unique challenges that Delhi designers have turned into opportunities, creating waterproof versions of traditional garments and innovative rainwear that doesn&apos;t sacrifice style for functionality.
-                </p>
-                
-                <p>
-                  Delhi&apos;s markets tell the story of its fashion evolution. From the wholesale fabric markets of Gandhi Nagar to the designer boutiques of Hauz Khas Village, each offers a different perspective on Delhi style. Chandni Chowk remains the heart of traditional bridal fashion, while Mehrauli has emerged as a hub for sustainable and ethical fashion brands. These diverse shopping destinations reflect the multifaceted nature of Delhi&apos;s fashion identity.
-                </p>
-                
-                <p>
-                  Sustainability has become a significant focus in recent years. Delhi-based designers are pioneering zero-waste patterns, upcycling vintage textiles, and reviving traditional dyeing techniques that minimize environmental impact. Consumers are increasingly supporting brands with transparent supply chains, reflecting a growing consciousness about fashion&apos;s ecological footprint. This movement represents a return to Delhi&apos;s roots when clothing was valued for craftsmanship and longevity.
                 </p>
               </div>
               
