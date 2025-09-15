@@ -454,7 +454,62 @@ const profiles = [
   { image: '/images/49.jpg' },
   { image: '/images/2291.jpg' },
 ]
+const items = [
+{
+title: 'Adult Companion Only for 18+',
+// subtitle: 'Only for 18+',
+src: '/images/18+.WEBP',
+},
+{
+title: 'Anal Sex on Special Deman',
+// subtitle: 'Special Deman',
+src: '/images/anal.webp',
+},
+{
+title: 'Kama-Sutra Sex Pose',
+// subtitle: 'Sex Pose',
+src: '/images/kamasutra.webp',
+},
+{
+title: 'Without Condom Sucking',
+// subtitle: 'Sucking',
+src: '/images/SUCKING.webp',
+},
+{
+title: 'Enjoy All Sexual Activity',
+// subtitle: 'Sexual Activity',
+src: '/images/anal.webp',
+},
+{
+title: 'Get Best Sensual Encounter in Bed',
+subtitle: 'Sensual Encounter in Bed',
+src: '/images/bedposition.webp',
+}
+]
 
+const locations = [
+  "Delhi Escorts",
+  "AIIMS Escorts",
+  "Ashok Nagar Escorts",
+  "Ashok Vihar Escorts",
+  "Ashram Escorts",
+  "Bhikaji Cama Place Escorts",
+  "Bijwasan Escorts",
+  "Chanakyapuri Escorts",
+  "Chandni Chowk Escorts",
+  "Chattarpur Escorts",
+  "Chawri Bazar Escorts",
+  "Civil Lines Escorts",
+  "Connaught Place Escorts",
+  "Daryaganj Escorts",
+  "Defence Colony Escorts",
+  "Delhi Cantt Escorts",
+  "Dhaula Kuan Escorts",
+  "Dilshad Garden Escorts",
+  "Dwarka Escorts",
+  "East Of Kailash Escorts",
+    
+];
   return (
     <>
     {/* Banner */}
@@ -580,7 +635,65 @@ const profiles = [
       </div>
     </section>
     {/* End Banner */}
+        <section className="py-10 bg-white">
+<div className="max-w-7xl mx-auto px-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 items-start">
+{items.map((it, idx) => (
+<div key={idx} className="flex flex-col items-center text-center">
+<div className="p-4 rounded-full bg-white shadow-sm hover:shadow-lg transition-shadow duration-200 flex items-center justify-center">
+<Image src={it.src} alt={it.title} width={80} height={80} className="object-contain" />
+</div>
+
+
+<h3 className="mt-4 text-lg font-semibold text-gray-800 leading-5">
+{it.title}
+</h3>
+
+
+<p className="mt-2 text-sm text-gray-600 max-w-[140px]">
+{it.subtitle}
+</p>
+</div>
+))}
+</div>
+</div>
+</section>
+{/* //// */}
+<section className="py-16">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            Escorts Service For Other Locations
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Meet our diverse team of professionals who bring excellence and passion to every engagement.
+          </p>
+        </motion.div>
+
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {locations.map((location, i) => (
+            <motion.a
+              key={i}
+              href="#"
+              className="block bg-red-800 text-white font-semibold text-lg py-4 rounded-xl shadow-md hover:bg-red-700 transition duration-300"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {location}
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
     {/* Content Hero Section */}
                   <section className="bg-gray-50 py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -1216,7 +1329,6 @@ View All Cities
 </div>
 </div>
 </section>
-
     {/* End Location */}
     {/* About Section */}
                         <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] relative overflow-hidden">
