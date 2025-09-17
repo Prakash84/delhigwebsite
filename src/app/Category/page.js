@@ -300,6 +300,125 @@ export default function Category() {
       </div>
     </div>
         {/* end banner */}
+        {/* staff showcase */}
+         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center mb-16"
+                >
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                    Our Exceptional Team
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Meet our diverse team of professionals who bring excellence and passion to every engagement.
+                  </p>
+                </motion.div>
+        
+                {/* Category Filters */}
+                <motion.div 
+                  className="flex flex-wrap justify-center gap-3 mb-12"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                >
+                  {categories.map(category => (
+                    <button
+                      key={category.id}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                        activeCategory === category.id
+                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                          : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+                      }`}
+                    >
+                      {category.name}
+                    </button>
+                  ))}
+                </motion.div>
+        
+                {/* Staff Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  {filteredStaff.map((staff) => (
+                    <motion.div
+                      key={staff.id}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4 }}
+                      whileHover={{ y: -10 }}
+                      className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                    >
+                      <div className="relative h-72 overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <div className="absolute inset-0 flex items-end p-6 z-20">
+                          <div>
+                            <h3 className="text-xl font-bold text-white">{staff.name}</h3>
+                            <p className="text-pink-300 font-medium">{staff.role}</p>
+                          </div>
+                        </div>
+                        <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-gray-800 z-20">
+                          {categories.find(cat => cat.id === staff.category)?.name}
+                        </div>
+                        
+                        {/* Placeholder for image */}
+                        <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-full flex items-center justify-center">
+                          <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                          <Image
+                                src={staff.image} // Make sure `staff.image` has full image URL or path
+                                alt={staff.name}
+                                fill
+                                className="object-cover"
+                              />
+                           </div>
+                      </div>
+                      
+                      <div className="p-5">
+                        <p className="text-gray-600 mb-4">{staff.description}</p>
+                        
+                        <div className="flex space-x-3">
+                          <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                            View Profile
+                          </button>
+                          <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+        
+                {/* Stats Section */}
+                <motion.div 
+                  className="mt-20 bg-gradient-to-r from-purple-700 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                >
+                  <div className="max-w-4xl mx-auto">
+                    <h3 className="text-2xl font-bold mb-6 text-center">Why Our Team Stands Out</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                      {[
+                        { value: '200+', label: 'Professionals' },
+                        { value: '98%', label: 'Client Satisfaction' },
+                        { value: '50+', label: 'Countries Represented' },
+                        { value: '24/7', label: 'Availability' }
+                      ].map((stat, index) => (
+                        <div key={index} className="text-center">
+                          <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
+                          <div className="text-pink-200">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+            {/* End Staff Showcase */}
             <section className="bg-gradient-to-r from-amber-50 to-white py-12 sm:py-16 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
@@ -563,230 +682,7 @@ export default function Category() {
           </div>
         </section>
         {/* end content section   */}
-        {/* staff showcase */}
-         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-              <div className="max-w-7xl mx-auto">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center mb-16"
-                >
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                    Our Exceptional Team
-                  </h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Meet our diverse team of professionals who bring excellence and passion to every engagement.
-                  </p>
-                </motion.div>
-        
-                {/* Category Filters */}
-                <motion.div 
-                  className="flex flex-wrap justify-center gap-3 mb-12"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.5 }}
-                >
-                  {categories.map(category => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                        activeCategory === category.id
-                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                          : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
-                      }`}
-                    >
-                      {category.name}
-                    </button>
-                  ))}
-                </motion.div>
-        
-                {/* Staff Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                  {filteredStaff.map((staff) => (
-                    <motion.div
-                      key={staff.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4 }}
-                      whileHover={{ y: -10 }}
-                      className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
-                    >
-                      <div className="relative h-72 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
-                        <div className="absolute inset-0 flex items-end p-6 z-20">
-                          <div>
-                            <h3 className="text-xl font-bold text-white">{staff.name}</h3>
-                            <p className="text-pink-300 font-medium">{staff.role}</p>
-                          </div>
-                        </div>
-                        <div className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-gray-800 z-20">
-                          {categories.find(cat => cat.id === staff.category)?.name}
-                        </div>
-                        
-                        {/* Placeholder for image */}
-                        <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-full flex items-center justify-center">
-                          <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
-                          <Image
-                                src={staff.image} // Make sure `staff.image` has full image URL or path
-                                alt={staff.name}
-                                fill
-                                className="object-cover"
-                              />
-                           </div>
-                      </div>
-                      
-                      <div className="p-5">
-                        <p className="text-gray-600 mb-4">{staff.description}</p>
-                        
-                        <div className="flex space-x-3">
-                          <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
-                            View Profile
-                          </button>
-                          <button className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-        
-                {/* Stats Section */}
-                <motion.div 
-                  className="mt-20 bg-gradient-to-r from-purple-700 to-pink-700 rounded-3xl p-8 text-white shadow-2xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
-                >
-                  <div className="max-w-4xl mx-auto">
-                    <h3 className="text-2xl font-bold mb-6 text-center">Why Our Team Stands Out</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                      {[
-                        { value: '200+', label: 'Professionals' },
-                        { value: '98%', label: 'Client Satisfaction' },
-                        { value: '50+', label: 'Countries Represented' },
-                        { value: '24/7', label: 'Availability' }
-                      ].map((stat, index) => (
-                        <div key={index} className="text-center">
-                          <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
-                          <div className="text-pink-200">{stat.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-            {/* End Staff Showcase */}
-            {/* 300 content section */}
-            <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fefaf6] to-[#fdf9f5] relative overflow-hidden">
-              {/* Decorative Elements */}
-              <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-purple-50 to-transparent opacity-70"></div>
-              <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-pink-100/30 blur-3xl"></div>
-              <div className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-purple-200/30 blur-3xl"></div>
-            
-              <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
-                
-                {/* Left Image */}
-                <motion.div
-                  className="relative"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group h-[550px]">
-                    <Image
-                      loading="lazy"
-                      src="/images/413965.jpg"
-                      alt="Luxury Spa Experience"
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-[2.5rem] transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                    {/* Floating Accent Circle */}
-                    <motion.div
-                      className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-pink-300/20 blur-2xl"
-                      animate={{
-                        y: [0, 15, 0],
-                        scale: [1, 1.05, 1],
-                      }}
-                      transition={{
-                        duration: 6,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    />
-                  </div>
-                </motion.div>
-            
-                {/* Right Content */}
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Heading */}
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
-                    The{" "}
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                      Ultimate Spa Journey
-                    </span>
-                  </h2>
-            
-                  {/* Long Content */}
-                  <div className="text-gray-600 text-lg leading-relaxed space-y-5 mb-8">
-                    <p>
-                      At <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Delhi Body Spa</strong>, 
-                      every treatment is designed to be more than just a service—it’s an 
-                      experience. Our luxurious spa is a haven for those seeking tranquility, 
-                      where elegant interiors blend seamlessly with calming aromas and soothing 
-                      melodies to transport you away from the stress of daily life.
-                    </p>
-                    <p>
-                      We specialize in{" "}
-                      <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                        female-to-male therapies, couple spa sessions, and rejuvenating body-to-body massages
-                      </strong>, 
-                      all tailored to refresh your body and mind. With skilled foreign 
-                      therapists and expert techniques, our treatments merge ancient healing 
-                      traditions with modern relaxation methods.
-                    </p>
-                    <p>
-                      Whether you desire deep relaxation, muscle relief, or a romantic retreat, 
-                      our spa offers personalized experiences that elevate self-care to an art. 
-                      Step into a world of indulgence, let go of your worries, and embrace the 
-                      true essence of wellness at Delhi Body Spa.
-                    </p>
-                  </div>
-            
-                  {/* CTA Buttons */}
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href="/about"
-                      className="relative overflow-hidden px-8 py-4 rounded-full font-medium text-white group"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:opacity-90 transition-all"></div>
-                      <span className="relative z-10">Explore More</span>
-                    </a>
-            
-                    <a
-                      href="#contact"
-                      className="px-8 py-4 rounded-full font-medium border-2 border-transparent bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 hover:bg-purple-50 transition-colors relative overflow-hidden group"
-                    >
-                      <span className="relative z-10">Book Appointment</span>
-                    </a>
-                  </div>
-                </motion.div>
-              </div>
-            </section>
-            {/* end 300 content section  */}
-            {/* pricing */}
+        {/* pricing */}
                  <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -931,6 +827,111 @@ export default function Category() {
                   </div>
                 </div>
                 {/* end pricing */}
+            {/* 300 content section */}
+            <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-[#fefaf6] to-[#fdf9f5] relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-purple-50 to-transparent opacity-70"></div>
+              <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-pink-100/30 blur-3xl"></div>
+              <div className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-purple-200/30 blur-3xl"></div>
+            
+              <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+                
+                {/* Left Image */}
+                <motion.div
+                  className="relative"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group h-[550px]">
+                    <Image
+                      loading="lazy"
+                      src="/images/413965.jpg"
+                      alt="Luxury Spa Experience"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-[2.5rem] transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Floating Accent Circle */}
+                    <motion.div
+                      className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-pink-300/20 blur-2xl"
+                      animate={{
+                        y: [0, 15, 0],
+                        scale: [1, 1.05, 1],
+                      }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                  </div>
+                </motion.div>
+            
+                {/* Right Content */}
+                <motion.div
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Heading */}
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+                    The{" "}
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                      Ultimate Spa Journey
+                    </span>
+                  </h2>
+            
+                  {/* Long Content */}
+                  <div className="text-gray-600 text-lg leading-relaxed space-y-5 mb-8">
+                    <p>
+                      At <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Delhi Body Spa</strong>, 
+                      every treatment is designed to be more than just a service—it’s an 
+                      experience. Our luxurious spa is a haven for those seeking tranquility, 
+                      where elegant interiors blend seamlessly with calming aromas and soothing 
+                      melodies to transport you away from the stress of daily life.
+                    </p>
+                    <p>
+                      We specialize in{" "}
+                      <strong className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        female-to-male therapies, couple spa sessions, and rejuvenating body-to-body massages
+                      </strong>, 
+                      all tailored to refresh your body and mind. With skilled foreign 
+                      therapists and expert techniques, our treatments merge ancient healing 
+                      traditions with modern relaxation methods.
+                    </p>
+                    <p>
+                      Whether you desire deep relaxation, muscle relief, or a romantic retreat, 
+                      our spa offers personalized experiences that elevate self-care to an art. 
+                      Step into a world of indulgence, let go of your worries, and embrace the 
+                      true essence of wellness at Delhi Body Spa.
+                    </p>
+                  </div>
+            
+                  {/* CTA Buttons */}
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="/about"
+                      className="relative overflow-hidden px-8 py-4 rounded-full font-medium text-white group"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:opacity-90 transition-all"></div>
+                      <span className="relative z-10">Explore More</span>
+                    </a>
+            
+                    <a
+                      href="#contact"
+                      className="px-8 py-4 rounded-full font-medium border-2 border-transparent bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 hover:bg-purple-50 transition-colors relative overflow-hidden group"
+                    >
+                      <span className="relative z-10">Book Appointment</span>
+                    </a>
+                  </div>
+                </motion.div>
+              </div>
+            </section>
+            {/* end 300 content section  */}
+            
                 {/* content */}
                             <section className="bg-gradient-to-b from-[#fdf9f5] to-[#fefaf6] py-16 px-4 md:px-8 lg:px-16 relative overflow-hidden">
                   {/* Decorative elements */}

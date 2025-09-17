@@ -89,46 +89,50 @@ export default function Foreignmodel() {
       : staffMembers.filter(member => member.category === activeCategory);
       {/* End Staff Showcase */}
       {/* pricing */}
-            const [plan, setPlan] = useState('one')
-
-  const packages = {
-    one: {
-      price: '₹20k',
-      title: 'One Session',
-      desc: 'Per 2-hour session',
-      features: [
-        'Cultural exchange',
-        'Language practice',
-        'International cuisine',
-        'Global perspective'
-      ]
-    },
-    two: {
-      price: '₹40k',
-      title: 'Two Sessions',
-      desc: 'Per 4-hour session',
-      features: [
-        'Extended cultural exchange',
-        'Deeper language practice',
-        'Fine dining & travel experience',
-        'Personalized itinerary'
-      ]
-    },
-    night: {
-      price: '₹60k',
-      title: 'Full Night',
-      desc: 'Overnight companionship',
-      features: [
-        'Full night companionship',
-        'VIP event hosting',
-        'Luxury travel support',
-        'Discretion guaranteed'
-      ]
-    }
-  }
-
-  const current = packages[plan]
-
+          const [selectedDuration, setSelectedDuration] = useState('Foreignmodel'); // 'session', 'two', 'night'
+        
+        const pricingPlans = [
+          
+          {
+            id: 'Foreignmodel',
+            title: 'Airhostess',
+            icon: <FaPlane className="text-teal-500" />,
+            description: 'Professional and sophisticated companions',
+            color: 'from-teal-500 to-emerald-600',
+            pricing: {
+              session: '15k',
+              two: '30k',
+              night: '45k'
+            },
+            features: ['Travel companionship', 'Multilingual conversation', 'Etiquette training', 'Event hosting']
+          },
+          {
+            id: 'Foreignmodel',
+            title: 'Foreigner',
+            icon: <FaGlobeAsia className="text-amber-500" />,
+            description: 'International companions for cultural exchange',
+            color: 'from-amber-500 to-orange-500',
+            pricing: {
+              session: '20k',
+              two: '40k',
+              night: '60k'
+            },
+            features: ['Cultural exchange', 'Language practice', 'International cuisine', 'Global perspective']
+          },
+          {
+            id: 'Foreignmodel',
+            title: 'Celebrity',
+            icon: <FaCrown className="text-purple-500" />,
+            description: 'Exclusive high-profile companions',
+            color: 'from-purple-600 to-fuchsia-600',
+            pricing: {
+              session: '30k',
+              two: '60k',
+              night: '90k'
+            },
+            features: ['VIP events', 'Red carpet appearances', 'Personalized experiences', 'Discretion guaranteed']
+          }
+        ];
           {/* end pricing */}
           // FAQ Section
               const [activeCategory1, setActiveCategory1] = useState('all');
@@ -642,58 +646,149 @@ export default function Foreignmodel() {
             </div>
             {/* End Staff Showcase */}
             {/* pricing */}
-                <section className="py-20 bg-gray-50">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        {/* Toggle */}
-        <div className="inline-flex rounded-full border border-gray-200 bg-white shadow-sm overflow-hidden mb-12">
-          <button
-            onClick={() => setPlan('one')}
-            className={`px-6 py-3 text-sm font-medium ${plan === 'one' ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white' : 'text-gray-600'}`}
-          >
-            One Session
-          </button>
-          <button
-            onClick={() => setPlan('two')}
-            className={`px-6 py-3 text-sm font-medium ${plan === 'two' ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white' : 'text-gray-600'}`}
-          >
-            Two Sessions
-          </button>
-          <button
-            onClick={() => setPlan('night')}
-            className={`px-6 py-3 text-sm font-medium ${plan === 'night' ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white' : 'text-gray-600'}`}
-          >
-            Full Night
-          </button>
-        </div>
-
-        {/* Pricing Card */}
-        <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-orange-100">
-          <div className="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-6 px-6">
-            <h3 className="text-2xl font-bold">Foreigner</h3>
-            <p className="text-sm opacity-90">International companions for cultural exchange</p>
-          </div>
-
-          <div className="px-6 py-8">
-            <div className="text-4xl font-extrabold text-gray-900">{current.price}</div>
-            <p className="text-gray-500 mt-1">{current.desc}</p>
-
-            <ul className="mt-6 space-y-3 text-gray-700 text-left">
-              {current.features.map((f, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✔</span>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-
-            <button className="mt-8 w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 rounded-full font-medium shadow-md hover:scale-[1.01] transition">
-              Select Package
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
+                 <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+                  <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                      <motion.h2 
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4"
+                      >
+                        Premium Companionship Services
+                      </motion.h2>
+                      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Select from our exclusive range of premium companionship experiences tailored to your preferences
+                      </p>
+                    </div>
+            
+                    {/* Duration Selector */}
+                    <motion.div 
+                      className="flex flex-wrap justify-center gap-4 mb-12 p-4 bg-white rounded-2xl shadow-lg max-w-2xl mx-auto"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {[
+                        { id: 'Foreignmodel', label: 'Foreign Model' },
+                        // { id: 'two', label: 'Two Sessions' },
+                        // { id: 'night', label: 'Full Night' }
+                      ].map((option) => (
+                        <button
+                          key={option.id}
+                          onClick={() => setSelectedDuration(option.id)}
+                          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center ${
+                            selectedDuration === option.id
+                              ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {option.label}
+                          {selectedDuration === option.id && (
+                            <FaStar className="ml-2 text-yellow-300 animate-pulse" />
+                          )}
+                        </button>
+                      ))}
+                    </motion.div>
+            
+                    {/* Pricing Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                      {pricingPlans.map((plan, index) => (
+                        <motion.div
+                          key={plan.id}
+                          initial={{ opacity: 0, y: 30 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.1 + 0.3 }}
+                          className={`bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 group ${
+                            plan.id === 'celebrity' ? 'ring-2 ring-purple-500 ring-offset-4' : ''
+                          }`}
+                        >
+                          {/* Card Header */}
+                          <div className={`bg-gradient-to-r ${plan.color} p-6 text-white`}>
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center">
+                                <div className="text-2xl mr-3">{plan.icon}</div>
+                                <h3 className="text-xl font-bold">{plan.title}</h3>
+                              </div>
+                              {plan.id === 'celebrity' && (
+                                <div className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center">
+                                  <FaStar className="mr-1" /> Premium
+                                </div>
+                              )}
+                            </div>
+                            <p className="mt-2 text-sm opacity-90">{plan.description}</p>
+                          </div>
+                          
+                          {/* Pricing */}
+                          <div className="p-6 border-b border-gray-100">
+                            <div className="text-center">
+                              <div className="text-4xl font-bold text-gray-800 group-hover:text-purple-700 transition-colors">
+                                ₹{plan.pricing[selectedDuration]}
+                              </div>
+                              <div className="text-gray-500 mt-1">
+                                {selectedDuration === 'session' && 'Per 2-hour session'}
+                                {selectedDuration === 'two' && 'For two sessions'}
+                                {selectedDuration === 'night' && 'Full night experience'}
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Features */}
+                          <div className="p-6">
+                            <ul className="space-y-3">
+                              {plan.features.map((feature, i) => (
+                                <li key={i} className="flex items-start">
+                                  <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                  <span className="text-gray-700">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            
+                            <button className={`mt-6 w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                              plan.id === 'celebrity' 
+                                ? 'bg-gradient-to-r from-purple-700 to-pink-700 text-white hover:from-purple-800 hover:to-pink-800' 
+                                : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300'
+                            }`}>
+                              Select Package
+                            </button>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+            
+                    {/* Additional Info */}
+                    <motion.div 
+                      className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 text-white shadow-2xl"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.5 }}
+                    >
+                      <div className="max-w-4xl mx-auto">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                          <div>
+                            <h3 className="text-2xl font-bold mb-4">Premium Experience Guarantee</h3>
+                            <ul className="space-y-2 text-gray-300">
+                              <li className="flex items-center"><FaCheck className="text-green-400 mr-2" /> Discreet and professional service</li>
+                              <li className="flex items-center"><FaCheck className="text-green-400 mr-2" /> Verified and background-checked companions</li>
+                              <li className="flex items-center"><FaCheck className="text-green-400 mr-2" /> Flexible scheduling options</li>
+                              <li className="flex items-center"><FaCheck className="text-green-400 mr-2" /> Custom experiences available upon request</li>
+                            </ul>
+                          </div>
+                          <div className="bg-gray-700/50 rounded-xl p-6 min-w-[300px]">
+                            <h4 className="font-bold text-lg mb-3">Why choose us?</h4>
+                            <div className="flex items-center mb-4">
+                              <div className="text-4xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">98%</div>
+                              <div className="ml-3 text-gray-300">Client Satisfaction Rate</div>
+                            </div>
+                            <div className="flex items-center">
+                              <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">24/7</div>
+                              <div className="ml-3 text-gray-300">Support Availability</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
                 {/* end pricing */}
                 
                 {/* FAQ Section */}

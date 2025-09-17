@@ -21,12 +21,14 @@ export default function Navbar() {
   }, []);
 
   const Services = [
-    { name: "Foreign Model", href: "/Category/Foreignmodel" },
+    { name: "Foreigner Staff", href: "/Category/Foreignmodel" },
     { name: "Air Hostess", href: "/Category/airhostess" },
-    { name: "Independent Indian Profile", href: "/Category/independentindianprofile" },
+    { name: "Independent Profile", href: "/Category/independentindianprofile" },
     { name: "Russian Model", href: "/Category/russianmodel" },
     { name: "Celebrity Profile", href: "/Category/celebrityprofile" },
     { name: "Spa Staff", href: "/Category/spastaff" },
+    { name: "COllege Girl", href: "/Category/spastaff" },
+    
   ];
 
   return (
