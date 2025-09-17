@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   const Services = [
-    { name: "Foreign Model", href: "/Category/Foreign" },
+    { name: "Foreign Model", href: "/Category/Foreignmodel" },
     { name: "Air Hostess", href: "/Category/airhostess" },
     { name: "Independent Indian Profile", href: "/Category/independentindianprofile" },
     { name: "Russian Model", href: "/Category/russianmodel" },
